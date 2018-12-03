@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUp /> renders the component 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="col-left"
+  >
+    <img
+      alt="Sign up poster"
+      src="https://iviidev.info/downloads/images/reading.jpg"
+    />
+  </div>
+  <div
+    className="col-right"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <h3
+        className="text-center"
+      >
+        Sign Up
+      </h3>
+      <div
+        className="form-group"
+        key="username"
+      >
+        <input
+          className="form-control"
+          id="username"
+          name="username"
+          onChange={[Function]}
+          pattern="[A-Za-z]{3,}$"
+          placeholder="Username"
+          required={true}
+          title="Must contain at least three characters or more characters without spaces"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+        key="email"
+      >
+        <input
+          className="form-control"
+          id="email"
+          name="email"
+          onChange={[Function]}
+          pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_\`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
+          placeholder="Email"
+          required={true}
+          title="Please provide a valid email address"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group"
+        key="password"
+      >
+        <input
+          className="form-control"
+          id="password"
+          name="password"
+          onChange={[Function]}
+          pattern="^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z0-9$@$!%*#?&]{8,}$"
+          placeholder="**********"
+          required={true}
+          title="Must contain at least one number and one letter, one special character, and at least 8 or more characters"
+          type="password"
+        />
+      </div>
+      <div
+        className="signup-buttons"
+      >
+        <button
+          className="btn btn-primary"
+          id="signUpBt"
+          name="signUpBt"
+          type="submit"
+        >
+          Sign Up
+        </button>
+        <div
+          className="social-login-icons"
+        >
+          <small
+            className="text-muted p-1"
+          >
+            Or Sign Up with Social Media: 
+          </small>
+          <div
+            className="icons-group text-center"
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="icon"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Array [
+                  "fab",
+                  "facebook-f",
+                ]
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="icon"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Array [
+                  "fab",
+                  "twitter",
+                ]
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            <FontAwesomeIcon
+              border={false}
+              className="icon"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Array [
+                  "fab",
+                  "google",
+                ]
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="small mt-3"
+      >
+        <span>
+          Already a member? 
+        </span>
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+`;

@@ -1,0 +1,7 @@
+const actionTypes = {
+  GET_USER_INPUT: 'GET_USER_INPUT',
+  USER_REGISTER_SUCCESS: 'USER_REGISTER_SUCCESS',
+  USER_REGISTER_FAIL: 'USER_REGISTER_FAIL',
+};
+
+export default actionTypes;

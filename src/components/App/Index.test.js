@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import Home from '../Home';
-import App from '.';
+import App from './index';
 
 it('renders without crashing', () => {
   shallow(<App />);

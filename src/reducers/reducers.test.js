@@ -1,19 +1,15 @@
 import expect from 'expect';
-import combinedReducers from './index';
-import USER_REGISTRATION from '../actions/index';
+import user from './userReducer';
+import article from './articleReducer';
 
-describe('post reducer', () => {
-  it('should return the initial state', () => {
-    expect(combinedReducers(undefined, {})).toEqual({
-      article: {}, user: {},
+describe('reducers', () => {
+  it('should return the initial state for user reducer', () => {
+    expect(user(undefined, {})).toEqual({
+      freshUser: { email: '', password: '', username: '' },
     });
   });
 
-  it('should handle GET_POST_START', () => {
-    const startAction = {
-      type: USER_REGISTRATION,
-    };
-    // it's empty on purpose because it's just starting to fetch posts
-    expect(combinedReducers({}, startAction)).toEqual({ article: {}, user: {} });
+  it('should return the initial state for articles reducer', () => {
+    expect(article(undefined, {})).toEqual({});
   });
 });

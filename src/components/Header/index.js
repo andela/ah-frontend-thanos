@@ -7,6 +7,7 @@ const Header = () => (
       <ul className="navbar-nav">
         <UrlLink link="" linkName="Home" />
         <UrlLink link="login" linkName="Login" />
+        <UrlLink link="signup" linkName="Signup" />
       </ul>
     </div>
   </nav>

@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    align-items: stretch;
+    padding: 30px;
+  }
+  .col-left {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .col-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  
+    form {
+      width: 100%;
+    }
+  }
+  .signup-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .social-login-icons {
+    display: flex;
+    justify-content: center;
+  
+    .icon {
+      height: 22px;
+      width: auto;
+      margin: 0 10px;
+    }
+    .icon:hover {
+      cursor: pointer;
+    }
+  
+    .fa-facebook-f path:hover {
+      fill: #3B5998;
+    }
+    .fa-twitter path:hover {
+      fill: #38A1F3;
+    }
+    .fa-google path:hover {
+      fill: #ff0000;
+    }
+  }
+  
+  // For responsiveness
+  @media only screen and (max-width: 800px) {
+    .container, .social-login-icons {
+      flex-wrap: wrap;
+    }
+    .col-right, .col-left, .social-login-icons .icons-group {
+      width: 100%;
+    }
+  }

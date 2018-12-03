@@ -1,8 +1,32 @@
 // handle all actions pertaining to the user (login, registration, ...)
-const user = (state = {}, action) => {
+import actionTypes from '../actions/actionTypes';
+
+const initialState = {
+  freshUser: {
+    password: '',
+    email: '',
+    username: '',
+  },
+};
+
+const user = (state = initialState, action) => {
   switch (action.type) {
-    default:
-      return state;
+    case actionTypes.GET_USER_INPUT:
+      return {
+        ...state,
+        freshUser: action.payload,
+      };
+    case actionTypes.USER_REGISTER_SUCCESS:
+      return {
+        ...state,
+        data: action.payload,
+      };
+    case actionTypes.USER_REGISTER_FAIL:
+      return {
+        ...state,
+        data: action.payload,
+      };
+    default: return state;
   }
 };
 
