@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserProfile /> component renders UserProfile 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="profile-box"
+  >
+    <div
+      className="lefter"
+    >
+      <div
+        className="profile-image"
+      >
+        <img
+          alt="profile dp"
+          src=""
+        />
+      </div>
+      <div
+        className="profile-username"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className="icon"
+          fixedWidth={false}
+          flip={null}
+          icon="user"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span
+          className="ml-2"
+        />
+      </div>
+      <Follow
+        onClick={[MockFunction]}
+        option={false}
+      />
+    </div>
+    <div
+      className="righter"
+    >
+      <div
+        className="profile-first-name"
+      >
+        <div
+          className="small grey"
+        >
+          First Name:
+        </div>
+        <span />
+      </div>
+      <div
+        className="profile-last-name"
+      >
+        <div
+          className="small grey"
+        >
+          Last Name:
+        </div>
+        <span />
+      </div>
+      <div
+        className="profile-bio"
+      >
+        <div
+          className="small grey"
+        >
+          Bio:
+        </div>
+        <span />
+      </div>
+      <div
+        className="profile-created-at"
+      >
+        <div
+          className="small grey"
+        >
+          Proud user since:
+        </div>
+        <span />
+      </div>
+    </div>
+  </div>
+  <div
+    className="follow-box"
+  >
+    <div
+      className="followers-box"
+    >
+      <h6>
+        People following 
+      </h6>
+      <div
+        key=""
+      >
+        <div
+          className="follower-image"
+        >
+          <a
+            href="/profiles/"
+          >
+            <img
+              alt="dp"
+              src="https://iviidev.info/downloads/images/anon.png"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="followees-box"
+    >
+      <h6>
+        People  follows
+      </h6>
+      <div
+        key=""
+      >
+        <div
+          className="follower-image"
+        >
+          <a
+            href="/profiles/"
+          >
+            <img
+              alt="dp"
+              src="https://picsum.photos/600"
+              title="  ()"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

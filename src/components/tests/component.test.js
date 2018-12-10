@@ -10,7 +10,7 @@ describe('>>> Shallow Render REACT COMPONENTS', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<Home />);
-    wrapper = shallow(<ViewProfile />);
+    wrapper = shallow(<ViewProfile followersList={[]} followeesList={[]} />);
     wrapper = shallow(<EditProfile />);
     wrapper = shallow(<Header />);
     wrapper = shallow(<UrlLink />);

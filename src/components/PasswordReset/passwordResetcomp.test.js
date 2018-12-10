@@ -3,26 +3,20 @@ import { shallow } from 'enzyme';
 import NewPassword from './newPassword';
 import PasswordReset from './index';
 
-describe('<NewPassword />', () => {
+describe('<NewPassword /> and <PasswordReset />', () => {
+  let wrapper;
   let newpasswordComponent;
 
   beforeEach(() => {
-    newpasswordComponent = shallow(<NewPassword onChange={jest.fn()} onSubmit={jest.fn()} />);
+    wrapper = shallow(<NewPassword onChange={jest.fn()} onSubmit={jest.fn()} />);
+    newpasswordComponent = shallow(
+      <PasswordReset handleChange={jest.fn()} handleSubmit={jest.fn()} />,
+    );
   });
-
-  it('renders the component', () => {
-    expect(newpasswordComponent).toMatchSnapshot();
+  it('should not fail while rendering', () => {
+    expect(wrapper).toMatchSnapshot();
   });
-});
-
-describe('<PasswordReset />', () => {
-  let newpasswordComponent;
-
-  beforeEach(() => {
-    newpasswordComponent = shallow(<PasswordReset />);
-  });
-
-  it('renders the component', () => {
+  it('should render correctly', () => {
     expect(newpasswordComponent).toMatchSnapshot();
   });
 });

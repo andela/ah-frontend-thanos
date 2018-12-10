@@ -16,7 +16,7 @@ import PasswordResetPage from '../../containers/PasswordResetPage';
 import NewPasswordPage from '../../containers/PasswordResetPage/newpasswordPage';
 import CreateArticlePage from '../../containers/CreateArticlePage';
 import Tags from '../TagList/viewTags';
-
+import FollowUnfollow from '../../containers/FollowUnfollow';
 
 library.add(faSearch);
 const App = () => (
@@ -35,6 +35,7 @@ const App = () => (
         <Route path="/newpassword" component={NewPasswordPage} exact />
         <Route path="/createArticle" component={CreateArticlePage} />
         <Route path="/tags" component={Tags} />
+        <Route exact path="/profiles/:username" component={FollowUnfollow} />
       </Switch>
       <Notification />
       <FooterConnected />

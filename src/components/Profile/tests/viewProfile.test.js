@@ -1,8 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import ProfileConnected from '../../../containers/profiles/profiles';
+import ViewProfile from '../viewProfile';
+import { sampleProfiles } from '../../../commons/initialStates';
 
 describe('Profile component', () => {
   let wrapper;
@@ -25,7 +27,8 @@ describe('Profile component', () => {
         <ProfileConnected
           {...props}
           getProfileAction={getProfileAction}
-
+          followersList={sampleProfiles}
+          followeesList={sampleProfiles}
           match={match}
         />
       </Provider>,
@@ -40,5 +43,12 @@ describe('Profile component', () => {
   it('should not redirect if isLoggedIn is false', () => {
     wrapper.setProps({ ...nextProps });
     expect(props.history.push).toBeCalledTimes(0);
+  });
+
+  it('renders ViewProfile', () => {
+    const viewProfile = mount(
+      <ViewProfile followersList={sampleProfiles} followeesList={sampleProfiles} />,
+    );
+    expect(viewProfile).toMatchSnapshot();
   });
 });

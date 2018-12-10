@@ -70,4 +70,22 @@ describe('Login Actions tests', () => {
       ));
     });
   });
+  test('Login action failure', () => {
+    moxios.stubRequest(`${APP_URL}/users/login`, {
+      status: 400,
+      responseText: {
+        error: { response: { data: { results: { error: ['login error'] } } } },
+      },
+    });
+    const expectedtActions = {
+      type: ACTION_TYPE.USER_LOGIN_FAILURE,
+      errorMessage: 'login error',
+    };
+    const store = mockStore({});
+    store.dispatch(loginThunk())
+      .then(() => {
+        expect(store.getActions()).toEqual(expect.objectContaining(expectedtActions));
+      })
+      .catch(() => {});
+  });
 });
