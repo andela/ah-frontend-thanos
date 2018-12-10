@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+#titleInput, 
+#descriptionInput,
+#image_urlInput,
+#tag_listInput {
+    height: 40px;
+    border-top: none;
+    border-left: none; 
+    border-right: none;
+}
+
+#createArticleBt {
+    padding: 15px;
+    width: 30%;
+    background-color: #47d79f;
+    border: none;
+    font-family: "Roboto Condensed", sans-serif;
+    &:hover {
+        background-color: #3db184;
+      }
+    
+}
+.artcileCreate{
+    font-family: "Roboto Condensed", sans-serif;
+}
+.createArticleTitle {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.artcileCreate {
+    padding-bottom: 30px;
+}
+#bodyInput {
+    height: 500px;
+}
+.create-article-form {
+  width: 80%;
+}
+
+.image-upload{
+    color: turquoise !important;
+    border-color: turquoise !important; }
+
+.image {
+    color: white;
+}
+input[type="file"] {
+    border-color: turquoise !important; 
+}

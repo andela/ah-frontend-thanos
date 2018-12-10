@@ -33,6 +33,12 @@ const swalMessages = {
     type: 'success',
     confirmButtonText: 'continue',
   },
+  CREATE_ARTICLE_SUCCESSFUL: {
+    title: 'Article created',
+    text: 'Your article was successfully created',
+    type: 'success',
+    confirmButtonText: 'continue',
+  },
 };
 
 export default swalMessages;
