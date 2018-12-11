@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './Home.scss';
 import Articles from '../../containers/Articles';
 import CarouselBanner from '../../containers/CarouselBanner';
+import Tags from '../TagList/viewTags';
 
 const Home = () => (
   <BrowserRouter>
@@ -17,7 +18,10 @@ const Home = () => (
           <Route path="/" component={Articles} />
         </div>
         <div className="righter">
-          <div className="righter-title"><h3>Popular Tags</h3></div>
+          <div>
+            <div className="righter-title">Popular Tags </div>
+            <Tags />
+          </div>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ const singleArticle = {
   title: 'something',
   description: 'train a dragon',
   image_url: 'http://www.artilce',
+  tag_list: ['dog', 'cat'],
 };
 
 const ruotes = route => (

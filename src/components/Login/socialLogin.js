@@ -49,7 +49,6 @@ export class SocialLogin extends React.Component {
       <div>
         <FacebookLogin
           appId="272693923595939"
-          autoLoad
           redirectUri="/"
           callback={this.handleFacebookResponse}
           render={renderProps => (socialIcon(renderProps.onClick, ['fab', 'facebook-f']))}

@@ -7,8 +7,6 @@ const initialState = {
 
 const socialLoginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.SOCIAL_LOGIN:
-      return { ...state };
     case ACTION_TYPES.LOGIN:
       return { ...state, isLoggedIn: true };
     default: return state;

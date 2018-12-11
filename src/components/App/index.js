@@ -15,6 +15,8 @@ import EditProfilePageConnected from '../../containers/profiles/editProfile';
 import PasswordResetPage from '../../containers/PasswordResetPage';
 import NewPasswordPage from '../../containers/PasswordResetPage/newpasswordPage';
 import CreateArticlePage from '../../containers/CreateArticlePage';
+import Tags from '../TagList/viewTags';
+
 
 library.add(faSearch);
 const App = () => (
@@ -32,6 +34,7 @@ const App = () => (
         <Route path="/passwordreset" component={PasswordResetPage} />
         <Route path="/newpassword" component={NewPasswordPage} exact />
         <Route path="/createArticle" component={CreateArticlePage} />
+        <Route path="/tags" component={Tags} />
       </Switch>
       <Notification />
       <FooterConnected />

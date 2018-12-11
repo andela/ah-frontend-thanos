@@ -1,8 +1,8 @@
 import expect from 'expect';
 import userReducer from '../userReducer';
 import socialLoginReducer from '../socialLoginReducer';
-import ACTION_TYPE from '../../actions/actionTypes';
 import { LogIn } from '../../actions/actionCreators';
+import ACTION_TYPES from '../../actions/actionTypes';
 
 describe('Testing User Reducer', () => {
   test('Test Reducer User Input', () => {
@@ -13,7 +13,7 @@ describe('Testing User Reducer', () => {
       email: 'johndoe@gmail.com',
     };
     const action = {
-      type: ACTION_TYPE.GET_USER_INPUT,
+      type: ACTION_TYPES.GET_USER_INPUT,
       payload,
     };
     const expectedData = {
@@ -31,7 +31,7 @@ describe('Testing User Reducer', () => {
       email: 'johndoe@gmail.com',
     };
     const action = {
-      type: ACTION_TYPE.USER_REGISTER_SUCCESS,
+      type: ACTION_TYPES.USER_REGISTER_SUCCESS,
       payload,
     };
     const expectedData = {
@@ -48,7 +48,7 @@ describe('Testing User Reducer', () => {
       email: ['user email already exists'],
     };
     const action = {
-      type: ACTION_TYPE.USER_REGISTER_FAIL,
+      type: ACTION_TYPES.USER_REGISTER_FAIL,
       payload,
     };
     const expectedData = {

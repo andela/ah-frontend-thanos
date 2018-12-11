@@ -48,6 +48,10 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       component={[Function]}
       path="/createArticle"
     />
+    <Route
+      component={[Function]}
+      path="/tags"
+    />
   </Switch>
   <_class
     options={Object {}}
