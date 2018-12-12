@@ -64,6 +64,7 @@ export const Login = ({ onChange, onSubmit }) => {
             </div>
           </div>
           {generateRedirectLinks('Not yet a member? ', 'signup', 'Sign Up')}
+          {generateRedirectLinks('', 'passwordreset', 'Forgot password?')}
         </form>
       </div>
     </div>

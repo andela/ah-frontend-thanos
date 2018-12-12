@@ -60,6 +60,11 @@ const Header = ({ history }) => (
                 </ul>
               )
             }
+          {/* <ul className="navbar-nav mr-auto mt-2 mt-lg-0 nav-2">
+            <UrlLink link="/login" linkName="LOGIN" />
+            <UrlLink link="/signup" linkName="SIGN UP" />
+          </ul> */}
+
           <form className="form-inline my-2 my-lg-0 search-form">
             <input
               className="form-control search-box"

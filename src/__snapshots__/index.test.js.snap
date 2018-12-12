@@ -35,7 +35,19 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       component={[Function]}
       path="/profiles/edit"
     />
+    <Route
+      component={[Function]}
+      path="/passwordreset"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/newpassword"
+    />
   </Switch>
+  <_class
+    options={Object {}}
+  />
   <Connect(Footer) />
 </BrowserRouter>
 `;
