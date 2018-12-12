@@ -44,8 +44,10 @@ describe('Testing User Reducer', () => {
   test('Test Reducer User Register Fail', () => {
     const intialState = {};
     const payload = {
-      username: ['user username already exists'],
-      email: ['user email already exists'],
+      results: {
+        username: ['user username already exists'],
+        email: ['user email already exists'],
+      },
     };
     const action = {
       type: ACTION_TYPES.USER_REGISTER_FAIL,
@@ -62,21 +64,5 @@ describe('Testing User Reducer', () => {
     const initiaState = { isLoggedIn: false };
     const newState = socialLoginReducer(initiaState, LogIn());
     expect(newState).toEqual({ isLoggedIn: true });
-  });
-
-  test('Test Reducer User Register Fail with no username', () => {
-    const intialState = {};
-    const payload = {
-      email: ['user email already exists'],
-    };
-    const action = {
-      type: ACTION_TYPES.USER_REGISTER_FAIL,
-      payload,
-    };
-    const expectedData = {
-      ...intialState,
-      data: action.payload,
-    };
-    expect(userReducer(intialState, action)).toEqual(expectedData);
   });
 });

@@ -17,12 +17,13 @@ export const showErrorAction = payload => ({
   payload, // error message
 });
 
-export const fetchArticlesThunk = () => dispatch => axios.get(`${APP_URL}/articles`)
+
+export const fetchArticlesThunk = pageNumber => dispatch => axios.get(`${APP_URL}/articles?page=${pageNumber}`)
   .then((response) => {
-    dispatch(fetchArticlesSuccess(response.data.results));
+    dispatch(fetchArticlesSuccess(response.data));
   })
-  .catch(() => {
-    dispatch(fetchArticlesFailure('Check your internet conectivity'));
+  .catch((error) => {
+    dispatch(fetchArticlesFailure(error.response.data.results));
   });
 
 

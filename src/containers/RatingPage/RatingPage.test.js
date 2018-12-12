@@ -16,7 +16,12 @@ describe('<RatingPage />', () => {
     };
     const store = mockStore(initialState);
     RatingPageComponent = mount(
-      <RatingPage article={jest.fn()} store={store} articleId={props.articleId} />,
+      <RatingPage
+        article={jest.fn()}
+        store={store}
+        articleId={props.articleId}
+        ratingReducer={initialState.ratingReducer}
+      />,
     );
   });
 

@@ -38,12 +38,12 @@ describe('Like/Dislike Actions', () => {
       .then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       })
-      .catch(() => {});
+      .catch(() => { });
     // if the article hasn't been liked/disliked before (likeDislikeStatus='')
     store.dispatch(likeDislikeArticleThunk({ ...likeObj, likeDislikeStatus: '' }))
       .then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       })
-      .catch(() => {});
+      .catch(() => { });
   });
 });

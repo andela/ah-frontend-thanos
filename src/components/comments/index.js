@@ -26,6 +26,7 @@ export const CommentsPage = ({ comments, handleLikeDislike }) => {
                 {comment.created_at}
               </small>
             </h6>
+            <hr />
           </div>
           <p className="card-text">{comment.comment_body}</p>
           <LikeDislike

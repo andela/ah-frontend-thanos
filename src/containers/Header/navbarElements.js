@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import UrlLink from '../../components/link';
 
+
 const navbarIcon = (
   <button
     className="navbar-toggler"
@@ -39,7 +40,7 @@ export const navbarLinks = (
         ARTICLES
       </NavLink>
       <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-        {navDropDown('/articles', 'All articles')}
+        {navDropDown('/articles/page/1', 'All articles')}
         {navDropDown('/createarticle', 'Create Article')}
       </div>
     </li>

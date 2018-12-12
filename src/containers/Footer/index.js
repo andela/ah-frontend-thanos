@@ -36,12 +36,12 @@ export class Footer extends Component {
     const { articles } = this.props;
     return (
       <div className="footer">
-        {articles && articles.length > 7 && (
+        {articles.results && articles.results.length > 7 && (
           <div className="carousel">
             <div id="carouselExampleIndicatorsFooter" className="carousel slide" data-ride="carousel">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <div className="row">{articles.slice(0, 8).map(article => CreateImage(article))}</div>
+                  <div className="row">{articles.results.slice(0, 8).map(article => CreateImage(article))}</div>
                 </div>
               </div>
             </div>
@@ -54,7 +54,7 @@ export class Footer extends Component {
 }
 
 Footer.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  articles: PropTypes.shape({}).isRequired,
 };
 
 const mapStateToProps = ({ articleReducer }) => ({

@@ -53,12 +53,8 @@ describe('Login Actions tests', () => {
       status: 400,
       response: { error: 'Not found' },
     });
-    const expectedtActions = [{
-      payload: { response: undefined },
-      type: ACTION_TYPE.USER_LOGIN_SUCCESS,
-    }];
     const store = mockStore({});
-    returnExpect(store, expectedtActions);
+    returnExpect(store, expectedtActionsLogin);
   });
   test('Login unsuccessfull', () => {
     moxios.stubRequest(`${APP_URL}/users/login`, {
