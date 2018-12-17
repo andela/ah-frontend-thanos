@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Bitter|Dancing+Script|Lobster|Sedgwick+Ave');
 
+$primaryLight: #40e0d0;
+$primaryDark: #20c0b0;
+$primaryDarker: #345F5B;
+
 .header {
   background-color: white;
   border-bottom: #cccccc solid;
@@ -67,5 +71,13 @@
   .search-form {
     display: flex;
     color: black;
+  }
+  #btLogout {
+    background: none;
+    border: none;
+  }
+  #btLogout:hover {
+    color: $primaryDark;
+    cursor: pointer;
   }
 }

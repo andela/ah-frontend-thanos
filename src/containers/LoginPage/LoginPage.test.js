@@ -59,7 +59,7 @@ describe('handle Invoke email for password reset', () => {
     expect(wrapper.state('email')).toBe('richard@gmail.com');
   });
 
-  it('should trigger login user dispatch', () => {
+  it('should check for the presence of dispatch methods', () => {
     const dispatch = jest.fn();
     mapDispatchToProps(dispatch).loginUser({});
     expect(dispatch.mock.calls[0][0]).toBeDefined();

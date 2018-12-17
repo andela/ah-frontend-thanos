@@ -3,8 +3,50 @@
 exports[`Provider and App renders <Provider/> correctly 1`] = `<App />`;
 
 exports[`Provider and App renders <Provider/> correctly 2`] = `
-<BrowserRouter>
-  <withRouter(Header) />
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Connect(Header)
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  />
   <Switch>
     <Route
       component={[Function]}
@@ -57,10 +99,14 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       exact={true}
       path="/profiles/:username"
     />
+    <Route
+      component={[Function]}
+      path="/search"
+    />
   </Switch>
   <_class
     options={Object {}}
   />
   <Connect(Footer) />
-</BrowserRouter>
+</Router>
 `;

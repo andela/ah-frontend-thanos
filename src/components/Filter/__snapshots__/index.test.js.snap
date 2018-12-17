@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filter /> component should render correctly 1`] = `
+<Filter
+  onChange={[MockFunction]}
+  onClick={[MockFunction]}
+  searchQuery="test"
+>
+  <div
+    className="container filter-box pt-3 text-center"
+  >
+    <h6>
+      Search or Filter by:
+    </h6>
+    <input
+      className="p-1 m-1"
+      id="title"
+      name="title"
+      onChange={[MockFunction]}
+      placeholder="Title"
+      type="text"
+    />
+    <input
+      className="p-1 m-1"
+      id="tag"
+      name="tag"
+      onChange={[MockFunction]}
+      placeholder="Tag"
+      type="text"
+    />
+    <input
+      className="p-1 m-1"
+      id="author"
+      name="author"
+      onChange={[MockFunction]}
+      placeholder="Author"
+      type="text"
+    />
+    <button
+      className="btn btn-primary btn-sm"
+      id="btFilter"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Filter
+    </button>
+  </div>
+</Filter>
+`;

@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> component should render correctly 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Header
+    fetchSearchArticlesDispatch={[MockFunction]}
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+    redirectTosearch={[MockFunction]}
+    saveSearchQueryDispatch={[MockFunction]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <div
+      className="header"
+    >
+      <nav
+        className="navbar nav navbar-expand-lg navbar-light"
+      >
+        <a
+          className="navbar-brand logo"
+          href="/"
+        >
+          Author\`s Haven
+        </a>
+        <button
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          className="navbar-toggler"
+          data-target="#navbarTogglerDemo02"
+          data-toggle="collapse"
+          type="button"
+        >
+          <span
+            className="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          id="navbarTogglerDemo02"
+        >
+          <ul
+            className="navbar-nav mr-auto mt-1 mt-lg-0 nav-1"
+          >
+            <UrlLink
+              link="/articles"
+              linkName="ARTICLES"
+            >
+              <li
+                className="nav-item active"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="nav-link"
+                  to="/articles"
+                >
+                  <Route
+                    path="\\\\/articles"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="nav-link"
+                      replace={false}
+                      to="/articles"
+                    >
+                      <a
+                        aria-current={null}
+                        className="nav-link"
+                        href="/articles"
+                        onClick={[Function]}
+                      >
+                        ARTICLES
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </li>
+            </UrlLink>
+            <UrlLink
+              link="/about"
+              linkName="ABOUT"
+            >
+              <li
+                className="nav-item active"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="nav-link"
+                  to="/about"
+                >
+                  <Route
+                    path="\\\\/about"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="nav-link"
+                      replace={false}
+                      to="/about"
+                    >
+                      <a
+                        aria-current={null}
+                        className="nav-link"
+                        href="/about"
+                        onClick={[Function]}
+                      >
+                        ABOUT
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </li>
+            </UrlLink>
+            <UrlLink
+              link="/contact"
+              linkName="CONTACT"
+            >
+              <li
+                className="nav-item active"
+              >
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="nav-link"
+                  to="/contact"
+                >
+                  <Route
+                    path="\\\\/contact"
+                  >
+                    <Link
+                      aria-current={null}
+                      className="nav-link"
+                      replace={false}
+                      to="/contact"
+                    >
+                      <a
+                        aria-current={null}
+                        className="nav-link"
+                        href="/contact"
+                        onClick={[Function]}
+                      >
+                        CONTACT
+                        <span
+                          className="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </a>
+                    </Link>
+                  </Route>
+                </NavLink>
+              </li>
+            </UrlLink>
+          </ul>
+          <div>
+            <ul
+              className="navbar-nav mr-auto mt-2 mt-lg-0 nav-2"
+            >
+              <UrlLink
+                link="/login"
+                linkName="LOGIN"
+              >
+                <li
+                  className="nav-item active"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="nav-link"
+                    to="/login"
+                  >
+                    <Route
+                      path="\\\\/login"
+                    >
+                      <Link
+                        aria-current={null}
+                        className="nav-link"
+                        replace={false}
+                        to="/login"
+                      >
+                        <a
+                          aria-current={null}
+                          className="nav-link"
+                          href="/login"
+                          onClick={[Function]}
+                        >
+                          LOGIN
+                          <span
+                            className="sr-only"
+                          >
+                            (current)
+                          </span>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </li>
+              </UrlLink>
+              <UrlLink
+                link="/signup"
+                linkName="SIGN UP"
+              >
+                <li
+                  className="nav-item active"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="nav-link"
+                    to="/signup"
+                  >
+                    <Route
+                      path="\\\\/signup"
+                    >
+                      <Link
+                        aria-current={null}
+                        className="nav-link"
+                        replace={false}
+                        to="/signup"
+                      >
+                        <a
+                          aria-current={null}
+                          className="nav-link"
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          SIGN UP
+                          <span
+                            className="sr-only"
+                          >
+                            (current)
+                          </span>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </li>
+              </UrlLink>
+            </ul>
+            <Search
+              onFocus={[Function]}
+              onQueryChange={[Function]}
+            >
+              <div
+                className="form-inline my-2 my-lg-0 search-form"
+              >
+                <input
+                  className="form-control search-box"
+                  id="search"
+                  name="search"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  placeholder="Search"
+                  type="search"
+                />
+                <div
+                  className="input-group-btn"
+                >
+                  <button
+                    className="btn btn-default search-bt"
+                    id="btSearch"
+                    type="button"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="search"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-search fa-w-16 "
+                        data-icon="search"
+                        data-prefix="fas"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </FontAwesomeIcon>
+                  </button>
+                </div>
+              </div>
+            </Search>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </Header>
+</Router>
+`;

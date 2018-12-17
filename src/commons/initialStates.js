@@ -62,6 +62,13 @@ const initialState = {
     followersList: [],
     followeesList: [],
   },
+  searchReducer: {
+    searchArticles: [],
+    searchQuery: '',
+    title: '',
+    tag: '',
+    author: '',
+  },
 };
 
 export const sampleProfiles = [
