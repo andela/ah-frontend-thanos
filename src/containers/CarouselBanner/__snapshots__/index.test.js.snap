@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarouselBanner /> container should render 1`] = `
+<CarouselBanner
+  articles={
+    Array [
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 1,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 2,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 3,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 4,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 5,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 6,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 7,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 8,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 9,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+    ]
+  }
+>
+  <div
+    className="carousel slide"
+    data-ride="carousel"
+    id="carouselExampleIndicators"
+  >
+    <ol
+      className="carousel-indicators"
+    >
+      <li
+        className="active"
+        data-slide-to="0"
+        data-target="#carouselExampleIndicators"
+      />
+      <li
+        data-slide-to="1"
+        data-target="#carouselExampleIndicators"
+      />
+      <li
+        data-slide-to="2"
+        data-target="#carouselExampleIndicators"
+      />
+    </ol>
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="carousel-item carousel-image-item active"
+        key="1"
+      >
+        <img
+          alt="slide"
+          className="d-block w-100"
+          src="http://test.png"
+        />
+        <div
+          className="carousel-caption d-none d-md-block carousel-article-desc"
+        >
+          <h5>
+            <a
+              href="article/1"
+            >
+              title sample
+            </a>
+          </h5>
+          <p>
+            desc
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item carousel-image-item "
+        key="2"
+      >
+        <img
+          alt="slide"
+          className="d-block w-100"
+          src="http://test.png"
+        />
+        <div
+          className="carousel-caption d-none d-md-block carousel-article-desc"
+        >
+          <h5>
+            <a
+              href="article/2"
+            >
+              title sample
+            </a>
+          </h5>
+          <p>
+            desc
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item carousel-image-item "
+        key="3"
+      >
+        <img
+          alt="slide"
+          className="d-block w-100"
+          src="http://test.png"
+        />
+        <div
+          className="carousel-caption d-none d-md-block carousel-article-desc"
+        >
+          <h5>
+            <a
+              href="article/3"
+            >
+              title sample
+            </a>
+          </h5>
+          <p>
+            desc
+          </p>
+        </div>
+      </div>
+    </div>
+    <a
+      className="carousel-control-prev"
+      data-slide="prev"
+      href="#carouselExampleIndicators"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="carousel-control-next"
+      data-slide="next"
+      href="#carouselExampleIndicators"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+</CarouselBanner>
+`;

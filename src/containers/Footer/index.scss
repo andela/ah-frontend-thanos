@@ -16,11 +16,12 @@ $lightgrey: #eaeaea;
       max-height: 200px;
       overflow: hidden;
       margin: 0;
+      text-align: center;
 
       img {
         display: block;
-        margin: 0 -30%;
-        width: 177.777%;
+        height: 100%;
+        z-index: 1;
       }
     }
   }
@@ -46,6 +47,13 @@ $lightgrey: #eaeaea;
       border-right: 1px solid $lightgrey;
       min-width: 5rem;
       justify-content: center;
+
+      .btTop {
+        border: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+      }
     }
     .nav-bottom {
       ul {

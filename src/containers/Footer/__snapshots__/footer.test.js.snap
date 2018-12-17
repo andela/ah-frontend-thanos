@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer tests testing create image 1`] = `
+<div
+  className="image-card"
+>
+  <a
+    href="/article/undefined"
+  >
+    <img
+      alt="article image1"
+    />
+  </a>
+</div>
+`;
+
+exports[`Footer tests testing footer 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="carousel"
+  >
+    <div
+      className="carousel slide"
+      data-ride="carousel"
+      id="carouselExampleIndicatorsFooter"
+    >
+      <div
+        className="carousel-inner"
+      >
+        <div
+          className="carousel-item active"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="image-card"
+              key="1"
+            >
+              <a
+                href="/article/1"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="2"
+            >
+              <a
+                href="/article/2"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="3"
+            >
+              <a
+                href="/article/3"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="4"
+            >
+              <a
+                href="/article/4"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="5"
+            >
+              <a
+                href="/article/5"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="6"
+            >
+              <a
+                href="/article/6"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="7"
+            >
+              <a
+                href="/article/7"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+            <div
+              className="image-card"
+              key="8"
+            >
+              <a
+                href="/article/8"
+                title="title sample"
+              >
+                <img
+                  alt="article image1"
+                  src="http://test.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="footer-bottom"
+  >
+    <div
+      className="copyright"
+    >
+      <span>
+        © 2018 Authors Haven
+      </span>
+    </div>
+    <div
+      className="go-to-top"
+    >
+      <span>
+        <button
+          className="btTop"
+          id="btTop"
+          onClick={[Function]}
+          type="button"
+        >
+          Top
+        </button>
+      </span>
+    </div>
+    <div
+      className="nav-bottom"
+    >
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            HOME
+          </a>
+        </li>
+        <li>
+          <a
+            href="/articles"
+          >
+            ARTICLE
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contact"
+          >
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

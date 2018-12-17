@@ -1,6 +1,19 @@
-.header-img {
-  flex-flow: row wrap;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+$bodyFontFamily: 'Montserrat', sans-serif;
+$headingFontFamily: 'Raleway', sans-serif;
+$primaryLight: #40e0d0;
+$primaryDark: #20c0b0;
+$primaryDarker: #345F5B;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFontFamily !important;
 }
+body, p {
+  font-family: $bodyFontFamily !important;
+}
+
 .home-body {
   display: flex;
   flex-flow: row wrap;

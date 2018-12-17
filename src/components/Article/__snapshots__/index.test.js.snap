@@ -56,7 +56,11 @@ exports[`<Article /> should render correctly 1`] = `
         <div
           className="author"
         >
-          janedoe
+          <a
+            href="profiles/janedoe"
+          >
+            janedoe
+          </a>
         </div>
       </span>
       <span

@@ -1,3 +1,7 @@
+$primaryLight: #40e0d0;
+$primaryDark: #20c0b0;
+$primaryDarker: #345F5B;
+
 .articles-body {
   display: flex;
   flex-flow: row wrap;
@@ -48,15 +52,22 @@
     .date-section {
     }
     .read-more {
-      border-radius: 5px;
-    //   border: 1px solid red;
-      width: 40%;
-	  background: #47d79f;
-	  color: white;
+      text-align: center;
+      padding-top: 20px;
 
-	  a{
-		  color: #efefef;
-	  }
+      a {
+        border-radius: 5px;
+        background: $primaryLight;
+        color: #efefef;
+        text-align: center;
+        padding: 5px 10px;
+      }
+      a:hover {
+        text-decoration: none;
+        border: 1px solid $primaryLight;
+        background: white;
+        color: $primaryDark;
+      }
     }
   }
 }

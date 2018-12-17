@@ -2,9 +2,12 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import UrlLink from '../link';
 import './Header.scss';
 
+library.add(faSearch);
 
 const isLoggedIn = () => (localStorage.getItem('token'));
 
@@ -28,9 +31,9 @@ const Header = ({ history }) => (
 
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav mr-auto mt-1 mt-lg-0 nav-1">
-          <UrlLink link="/ARTICLES" linkName="ARTICLES" />
-          <UrlLink link="/ABOUT" linkName="ABOUT" />
-          <UrlLink link="/CONTACT" linkName="CONTACT" />
+          <UrlLink link="/articles" linkName="ARTICLES" />
+          <UrlLink link="/about" linkName="ABOUT" />
+          <UrlLink link="/contact" linkName="CONTACT" />
         </ul>
         <div>
           {
