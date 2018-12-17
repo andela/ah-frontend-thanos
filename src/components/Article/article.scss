@@ -77,4 +77,13 @@ $primaryDarker: #345F5B;
         display: flex;
         justify-content: space-between;
     }
+    .share {
+        display: flex;
+        margin: 15px 80px;
+        justify-content: space-between;
+        cursor: pointer;
+        .Demo__some-network {
+            margin-right: 20px;
+        }
+    }
 }

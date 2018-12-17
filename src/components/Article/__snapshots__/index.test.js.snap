@@ -204,5 +204,38 @@ exports[`<Article /> should render correctly 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="share"
+  >
+    <ShareRow
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 1,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+    />
+  </div>
 </div>
 `;
