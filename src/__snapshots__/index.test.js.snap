@@ -47,6 +47,9 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       }
     }
   />
+  <_class
+    options={Object {}}
+  />
   <Switch>
     <Route
       component={[Function]}
@@ -64,10 +67,6 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
     <Route
       component={[Function]}
       path="/articles"
-    />
-    <Route
-      component={[Function]}
-      path="/article/:articleId"
     />
     <Route
       component={[Function]}
@@ -107,10 +106,16 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       component={[Function]}
       path="/editarticle/:articleId"
     />
+    <Route
+      component={[Function]}
+      path="/article/:articleId/report"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/article/:articleId"
+    />
   </Switch>
-  <_class
-    options={Object {}}
-  />
   <Connect(Footer) />
 </Router>
 `;

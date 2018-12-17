@@ -71,6 +71,9 @@ const initialState = {
     tag: '',
     author: '',
   },
+  reportReducer: {
+    reason: '',
+  },
 };
 
 export const sampleProfiles = [
