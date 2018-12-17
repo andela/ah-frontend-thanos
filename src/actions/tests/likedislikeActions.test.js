@@ -3,7 +3,6 @@ import thunk from 'redux-thunk';
 import moxios from 'moxios';
 import actionTypes from '../actionTypes';
 import { likeDislikeArticleThunk } from '../likedislikeActions';
-import APP_URL from '../../utils/constants';
 
 const mockStore = configureMockStore([thunk]);
 
@@ -16,7 +15,7 @@ describe('Like/Dislike Actions', () => {
     moxios.install();
     store = mockStore({});
     sampleId = 1;
-    url = `${APP_URL}/articles/${sampleId}/like_status`;
+    url = `https://ah-backend-thanos-staging.herokuapp.com/api/articles/${sampleId}/like_status`;
   });
 
   afterEach(() => {

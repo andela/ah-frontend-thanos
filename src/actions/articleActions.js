@@ -1,6 +1,5 @@
 import axios from 'axios';
 import ACTION_TYPE from './actionTypes';
-import APP_URL from '../utils/constants';
 
 export const fetchArticlesSuccess = articles => ({
   type: ACTION_TYPE.FETCH_ARTICLES_SUCCESS,
@@ -17,7 +16,7 @@ export const showErrorAction = payload => ({
   payload, // error message
 });
 
-export const fetchArticlesThunk = () => dispatch => axios.get(`${APP_URL}/articles`)
+export const fetchArticlesThunk = () => dispatch => axios.get('https://ah-backend-thanos-staging.herokuapp.com/api/articles')
   .then((response) => {
     dispatch(fetchArticlesSuccess(response.data.results));
   })
@@ -37,7 +36,7 @@ export const getLikeStatusAction = payload => ({
 });
 
 export const getArticleThunk = articleId => (dispatch) => {
-  const url = `${APP_URL}/articles/${articleId}`;
+  const url = `https://ah-backend-thanos-staging.herokuapp.com/api/articles/${articleId}`;
   return axios.get(url)
     .then((response) => {
       dispatch(getArticleAction(response.data.results));
@@ -52,7 +51,7 @@ export const getArticleThunk = articleId => (dispatch) => {
 };
 
 export const getLikeStatusThunk = ({ articleId, token }) => (dispatch, getState) => {
-  const url = `${APP_URL}/articles/${articleId}/like_status`;
+  const url = `https://ah-backend-thanos-staging.herokuapp.com/api/articles/${articleId}/like_status`;
   return axios.get(url, { headers: { Authorization: `Token ${token}` } })
     .then((response) => {
       const obj = response.data.results.filter(

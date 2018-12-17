@@ -6,7 +6,7 @@ import ArticleDisplay from '../../components/Articles';
 import '../../components/Articles/Articles.scss';
 
 export class Articles extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchArticlesThunk());
   }

@@ -9,7 +9,6 @@ import {
   fetchArticlesThunk,
 } from '../articleActions';
 import ACTION_TYPE from '../actionTypes';
-import APP_URL from '../../utils/constants';
 
 describe('Article component', () => {
   let store;
@@ -21,7 +20,7 @@ describe('Article component', () => {
     sampleId = 1;
     const mockStore = configureMockStore([reduxThunk]);
     store = mockStore({});
-    url = `${APP_URL}/articles/${sampleId}`;
+    url = `https://ah-backend-thanos-staging.herokuapp.com/api/articles/${sampleId}`;
   });
 
   afterEach(() => {
@@ -31,7 +30,7 @@ describe('Article component', () => {
   it('should handle fetchArticlesFailure', () => {
     const errorMessage = 'Check your internet conectivity';
     moxios.stubRequest(
-      `${APP_URL}/articles`,
+      'https://ah-backend-thanos-staging.herokuapp.com/api/articles',
       {
         status: 400,
         response: {
@@ -58,7 +57,7 @@ describe('Article component', () => {
       ],
     };
     moxios.stubRequest(
-      `${APP_URL}/articles`,
+      'https://ah-backend-thanos-staging.herokuapp.com/api/articles',
       {
         status: 200,
         response: mockData,
@@ -126,7 +125,7 @@ describe('Article component', () => {
       articleId: sampleId,
       token: 'abcabc',
     };
-    moxios.stubRequest(`${url}/like_status`, {
+    moxios.stubRequest('https://ah-backend-thanos-staging.herokuapp.com/api/like_status', {
       status: 200,
       responseText: {
         status_code: 200,

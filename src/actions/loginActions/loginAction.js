@@ -1,6 +1,5 @@
 import axios from 'axios';
 import ACTION_TYPE from '../actionTypes';
-import APP_URL from '../../utils/constants';
 
 export const loginSuccess = response => ({
   type: ACTION_TYPE.USER_LOGIN_SUCCESS,
@@ -18,7 +17,7 @@ export const loginThunk = data => (dispatch) => {
       ...data,
     },
   };
-  return axios.post(`${APP_URL}/users/login`, userdata)
+  return axios.post('https://ah-backend-thanos-staging.herokuapp.com/api/users/login', userdata)
     .then((res) => {
       dispatch(loginSuccess(res.data.results));
     }).catch((error) => {

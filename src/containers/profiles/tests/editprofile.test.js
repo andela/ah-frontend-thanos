@@ -86,7 +86,7 @@ describe('Test  Edit Profile container', () => {
     );
 
     global.cloudinary = {
-      openUploadWidget(props, callback) {
+      openUploadWidget(_props, callback) {
         // make the callback asynchronous
         setTimeout(callback(null, { event: 'success', info: { secure_url: 'some-url' } }), 0);
         return { close: jest.fn() };

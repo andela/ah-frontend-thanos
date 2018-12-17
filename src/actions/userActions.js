@@ -1,7 +1,6 @@
 import axios from 'axios';
 import swal from 'sweetalert2';
 import actionTypes from './actionTypes';
-import APP_URL from '../utils/constants';
 import { SocialLogin, LogIn, socialLoginFailure } from './actionCreators';
 
 export const signupSuccessful = response => ({
@@ -21,8 +20,7 @@ export const getUserInput = payload => ({
 
 export const userSignup = freshUser => (dispatch) => {
   swal.showLoading();
-  return axios
-    .post(`${APP_URL}/users`, freshUser)
+  return axios.post('https://ah-backend-thanos-staging.herokuapp.com/api/users', freshUser)
     .then((response) => {
       dispatch(
         signupSuccessful({
@@ -42,7 +40,7 @@ export const userSignup = freshUser => (dispatch) => {
 export const socialUserLogin = (url, token) => (dispatch) => {
   dispatch(SocialLogin(true));
   return axios
-    .post(`${APP_URL}/${url}/${token}`)
+    .post(`https://ah-backend-thanos-staging.herokuapp.com/api/${url}/${token}`)
     .then((response) => {
       localStorage.setItem('token', response.data.results.token);
       localStorage.setItem('username', response.data.results.username);

@@ -37,6 +37,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "coveralls": "^3.0.2",
+    "env-cmd": "^8.0.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
@@ -94,7 +95,7 @@
     "serve": "^10.1.1",
     "sweetalert2": "^7.30.0",
     "toastr": "^2.1.4",
-    "webpack": "^4.26.1",
+    "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.4"

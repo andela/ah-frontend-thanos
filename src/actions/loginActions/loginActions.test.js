@@ -3,7 +3,6 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { loginSuccess, loginThunk, loginFailure } from './loginAction';
 import ACTION_TYPE from '../actionTypes';
-import APP_URL from '../../utils/constants';
 
 describe('Login Actions tests', () => {
   const mockStore = configureMockStore([thunk]);
@@ -39,13 +38,13 @@ describe('Login Actions tests', () => {
     })
   );
   test('Login successfull', () => {
-    moxios.stubRequest(`${APP_URL}/users/login`, loginSuccessData);
+    moxios.stubRequest('https://ah-backend-thanos-staging.herokuapp.com/api/users/login', loginSuccessData);
     const expectedtActions = { type: ACTION_TYPE.USER_LOGIN_SUCCESS };
     const store = mockStore({});
     returnExpect(store, expectedtActions);
   });
   test('Login failed', () => {
-    moxios.stubRequest(`${APP_URL}/users/login`, {
+    moxios.stubRequest('https://ah-backend-thanos-staging.herokuapp.com/api/users/login', {
       status: 400,
       response: { error: 'Not found' },
     });
@@ -57,7 +56,7 @@ describe('Login Actions tests', () => {
     returnExpect(store, expectedtActions);
   });
   test('Login unsuccessfull', () => {
-    moxios.stubRequest(`${APP_URL}/users/login`, {
+    moxios.stubRequest('https://ah-backend-thanos-staging.herokuapp.com/api/users/login', {
       status: 400,
       errors: {
         results: { errors: ['Some error here'] },

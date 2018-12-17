@@ -1,6 +1,5 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
-import APP_URL from '../utils/constants';
 
 export const likeDislikeArticleAction = payload => ({
   type: actionTypes.LIKEDISLIKE_ARTICLE,
@@ -9,7 +8,7 @@ export const likeDislikeArticleAction = payload => ({
 
 export const likeDislikeArticleThunk = likeObj => (dispatch) => {
   const { articleId, likeDislikeStatus, token } = likeObj;
-  const url = `${APP_URL}/articles/${articleId}/like_status`;
+  const url = `https://ah-backend-thanos-staging.herokuapp.com/api/articles/${articleId}/like_status`;
   const headerValue = { headers: { Authorization: `Token ${token}` } };
   const payload = res => ({
     results: res.data.results,
