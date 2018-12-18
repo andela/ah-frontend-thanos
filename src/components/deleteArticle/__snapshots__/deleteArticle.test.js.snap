@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeleteArticle />  renders the component 1`] = `
+<div>
+  <button
+    className="btn btn-danger"
+    id="delete-bt"
+    onClick={[MockFunction]}
+    type="submit"
+  >
+    DELETE ARTICLE
+  </button>
+</div>
+`;

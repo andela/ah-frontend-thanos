@@ -206,7 +206,7 @@ exports[`<Article /> should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="share"
+    className="share container"
   >
     <ShareRow
       article={

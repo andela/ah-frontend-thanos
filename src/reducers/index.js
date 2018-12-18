@@ -11,6 +11,7 @@ import tagsReducer from './tagsReducer';
 import followUnfollowReducer from './followUnfollowReducer';
 import searchReducer from './searchReducer';
 import editArticleReducer from './editArticleReducer/editArticleReducer';
+import deleteArticleReducer from './deleteArticleReducer/deleteArticleReducer';
 
 const reducer = combineReducers({
   loginReducer,
@@ -25,6 +26,7 @@ const reducer = combineReducers({
   followUnfollowReducer,
   searchReducer,
   editArticleReducer,
+  deleteArticleReducer,
 });
 
 export default reducer;
