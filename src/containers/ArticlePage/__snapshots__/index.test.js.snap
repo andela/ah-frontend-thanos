@@ -366,6 +366,7 @@ exports[`<ArticlePage /> renders the container 1`] = `
                 className="article-stats"
               >
                 <LikeDislike
+                  commentId={0}
                   dislikes={2}
                   likes={12}
                   onLikeDislike={[Function]}
@@ -1167,6 +1168,7 @@ exports[`<ArticlePage /> renders the container 1`] = `
               }
             }
             getArticlecomments={[Function]}
+            likeDislikeComment={[Function]}
             match={
               Object {
                 "params": Object {
@@ -1189,6 +1191,7 @@ exports[`<ArticlePage /> renders the container 1`] = `
                       },
                     }
                   }
+                  handleLikeDislike={[Function]}
                 >
                   <div
                     className="col-sm-8 offset-2"

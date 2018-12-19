@@ -5,6 +5,7 @@ exports[`<SignUpPage /> should render the component 1`] = `
   commentInputFun={[Function]}
   comments={Object {}}
   getArticlecomments={[Function]}
+  likeDislikeComment={[Function]}
   match={
     Object {
       "params": Object {

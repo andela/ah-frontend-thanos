@@ -13,6 +13,8 @@ describe('<Article />', () => {
             { id: 7, username: 'Sulaiman', email: 'sulaiman@andela.com' },
           created_at: '2018-12-10T05:23:51.342553Z',
           updated_at: '2018-12-10T05:23:51.342616Z',
+          likes: 3,
+          dislikes: 0,
         },
       ],
     },
@@ -20,7 +22,7 @@ describe('<Article />', () => {
 
   test('should render correctly', () => {
     const wrapper = shallow(
-      <CommentsPage comments={comments} />,
+      <CommentsPage comments={comments} handleLikeDislike={jest.fn()} />,
     );
     expect(wrapper).toMatchSnapshot();
   });

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { CommentsPage, CommentForm } from '../../components/comments';
-import { AllComments, CommentInput, PostComment } from '../../actions/commentActions';
+import {
+  AllComments, CommentInput, PostComment, LikeDislikeComment,
+} from '../../actions/commentActions';
 import '../../components/comments/comments.scss';
 
 class Comments extends Component {
@@ -29,6 +31,12 @@ class Comments extends Component {
     postComment(articleId, data);
   };
 
+  handleLike = (data, commentId) => {
+    const { match, likeDislikeComment } = this.props;
+    const { articleId } = match.params;
+    likeDislikeComment(articleId, commentId, { like_status: data });
+  };
+
   render() {
     const { comments } = this.props;
     const token = localStorage.getItem('token');
@@ -44,7 +52,12 @@ class Comments extends Component {
         <div>
           {
             comments.getCommentData
-              ? <CommentsPage comments={comments} />
+              ? (
+                <CommentsPage
+                  comments={comments}
+                  handleLikeDislike={this.handleLike}
+                />
+              )
               : <span />
           }
         </div>
@@ -58,6 +71,7 @@ Comments.propTypes = {
   commentInputFun: propTypes.func.isRequired,
   postComment: propTypes.func.isRequired,
   match: propTypes.shape({}).isRequired,
+  likeDislikeComment: propTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ comments }) => (
@@ -69,6 +83,9 @@ const mapDispatchToProps = dispatch => (
     getArticlecomments: articleId => dispatch(AllComments(articleId)),
     commentInputFun: data => dispatch(CommentInput(data)),
     postComment: (articleId, data) => dispatch(PostComment(articleId, data)),
+    likeDislikeComment: (articleId, commentId, data) => dispatch(LikeDislikeComment(
+      articleId, commentId, data,
+    )),
   }
 );
 
