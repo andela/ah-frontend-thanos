@@ -36,6 +36,6 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       path="/profiles/edit"
     />
   </Switch>
-  <Footer />
+  <Connect(Footer) />
 </BrowserRouter>
 `;

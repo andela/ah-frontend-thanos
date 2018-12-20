@@ -21,11 +21,6 @@ const createIconSection = (icon, cssClass, content) => (
 const Article = ({ onLikeDislike, article }) => {
   const iconSections = [
     {
-      icon: 'user',
-      cssClass: 'author',
-      content: article.author.username,
-    },
-    {
       icon: 'clock',
       cssClass: 'readtime',
       content: `${article.read_time} min read`,
@@ -54,6 +49,12 @@ const Article = ({ onLikeDislike, article }) => {
             <img src={article.image_url} alt="poster" />
           </div>
           <div className="article-small-details">
+            <span key="author">
+              <FontAwesomeIcon icon="user" />
+              <div className="author">
+                <a href={`profiles/${article.author.username}`}>{article.author.username}</a>
+              </div>
+            </span>
             {iconSections.map(el => createIconSection(el.icon, el.cssClass, el.content))}
           </div>
           <div className="article-taglist">

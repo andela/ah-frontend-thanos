@@ -203,7 +203,11 @@ exports[`<ArticlePage /> renders the container 1`] = `
                   <div
                     className="author"
                   >
-                    janedoe
+                    <a
+                      href="profiles/janedoe"
+                    >
+                      janedoe
+                    </a>
                   </div>
                 </span>
                 <span
