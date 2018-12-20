@@ -8,6 +8,8 @@ import {
 import './article.scss';
 import LikeDislike from '../LikeDislike';
 import RatingPage from '../../containers/RatingPage';
+import ShareRow from './shareRow';
+
 
 library.add(faUser, faClock, faCalendar, faEye, faCheck, faThumbsUp, faThumbsDown);
 
@@ -76,6 +78,9 @@ const Article = ({ onLikeDislike, article }) => {
               <span className="pl-2"># Views</span>
             </div>
           </div>
+        </div>
+        <div className="share">
+          <ShareRow article={article} />
         </div>
       </div>
     ) : null
