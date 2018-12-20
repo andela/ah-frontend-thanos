@@ -5,37 +5,34 @@ import thunk from 'redux-thunk';
 import Comments from './index';
 
 describe('<SignUpPage />', () => {
-  let CommentWrapper;
+  const props = {
+    match: { params: { articleId: 1 } },
+  };
+  const middlewares = [thunk];
+  const mockStore = configureStore(middlewares);
+  const initialState = { comments: {} };
+  const store = mockStore(initialState);
+  const CommentWrapper = shallow(<Comments store={store} match={props.match} />);
 
-  beforeEach(() => {
-    const props = {
-      match: { params: { articleId: 1 } },
-    };
-    const middlewares = [thunk];
-    const mockStore = configureStore(middlewares);
-    const initialState = { comments: {} };
-    const store = mockStore(initialState);
-    CommentWrapper = shallow(<Comments store={store} match={props.match} />);
-  });
+  const wrapper = CommentWrapper.dive().instance();
+  const event = {
+    preventDefault: () => { },
+    target: () => { },
+  };
 
   it('should render the component', () => {
     expect(CommentWrapper).toMatchSnapshot();
   });
 
   test('Test if the component has a handleComments function', () => {
-    const event = {
-      preventDefault: () => { },
-    };
-    const wrapper = CommentWrapper.dive().instance();
     wrapper.handleComment(event);
   });
 
   test('Test if the component has a handleOnChange function', () => {
-    const event = {
-      preventDefault: () => { },
-      target: () => { },
-    };
-    const wrapper = CommentWrapper.dive().instance();
     wrapper.handleOnChange(event);
+  });
+
+  test('Test if the component has a handleOnChange function', () => {
+    wrapper.handleLike({ like_status: 'like' }, 12);
   });
 });

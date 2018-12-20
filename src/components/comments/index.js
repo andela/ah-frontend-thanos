@@ -1,27 +1,44 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faUser, faCalendar,
+} from '@fortawesome/free-solid-svg-icons';
+import LikeDislike from '../LikeDislike';
 
-export const CommentsPage = ({ comments }) => {
+
+export const CommentsPage = ({ comments, handleLikeDislike }) => {
   const getCommentItems = comments.getCommentData.results.map(comment => (
     <div key={comment.id}>
-      <div className="media border p-3 bg-light">
-        <div className="media-body">
-          <h6>
-            {comment.comment_author.username}
-          </h6>
-          <p>{comment.comment_body}</p>
-          <small>
-            <i>
-              Posted on  &ensp;
-            </i>
-            {comment.created_at}
-          </small>
+      <div className="card bg-light text-dark">
+        <div className="card-body">
+          <div className="card-title">
+            <h6>
+              <FontAwesomeIcon icon={faUser} />
+              &ensp;
+              {comment.comment_author.username}
+              <small>
+                &ensp; &ensp; &ensp;
+                <FontAwesomeIcon icon={faCalendar} />
+                &ensp;
+                Created
+                &ensp;
+                {comment.created_at}
+              </small>
+            </h6>
+          </div>
+          <p className="card-text">{comment.comment_body}</p>
+          <LikeDislike
+            onLikeDislike={handleLikeDislike}
+            likes={comment.likes}
+            dislikes={comment.dislikes}
+            commentId={comment.id}
+          />
         </div>
       </div>
       <br />
     </div>
   ));
-
   return (
     <div className="col-sm-8 offset-2">
       <br />
@@ -32,6 +49,7 @@ export const CommentsPage = ({ comments }) => {
 
 CommentsPage.propTypes = {
   comments: propTypes.shape({}).isRequired,
+  handleLikeDislike: propTypes.func.isRequired,
 };
 
 export const CommentForm = ({ onSubmitHandler, onChangeHandler }) => (

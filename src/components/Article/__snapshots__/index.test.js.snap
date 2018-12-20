@@ -168,6 +168,7 @@ exports[`<Article /> should render correctly 1`] = `
       className="article-stats"
     >
       <LikeDislike
+        commentId={0}
         dislikes={2}
         likes={12}
         onLikeDislike={[MockFunction]}

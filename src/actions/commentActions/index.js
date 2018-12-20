@@ -27,6 +27,16 @@ export const postCommentFail = data => ({
   payload: data,
 });
 
+export const LikeDislikefail = data => ({
+  type: action.LIKEDISLIKEFAIL,
+  payload: data,
+});
+
+export const LikeDislikeSuccessful = data => ({
+  type: action.LIKEDISLIKESUCCESSFUL,
+  payload: data,
+});
+
 export const AllComments = articleId => (dispatch) => {
   const url = `${APP_URL}/articles/${articleId}/comments`;
   return axios.get(url)
@@ -34,17 +44,31 @@ export const AllComments = articleId => (dispatch) => {
     .catch((error) => { dispatch(allCommentsFail(error.response)); });
 };
 
+const token = localStorage.getItem('token');
+const headers = {
+  headers: {
+    Authorization: `Token ${token}`,
+  },
+};
+
 export const PostComment = (articleId, data) => (dispatch) => {
-  const token = localStorage.getItem('token');
-  const headers = {
-    headers: {
-      Authorization: `Token ${token}`,
-    },
-  };
   const url = `${APP_URL}/articles/${articleId}/comments`;
   return axios.post(url, data, headers)
     .then((response) => { dispatch(postCommentSuccessful(response.data.results)); })
     .catch((error) => {
       dispatch(postCommentFail(error.response.data));
+    });
+};
+
+export const LikeDislikeComment = (articleId, commentId, data) => (dispatch) => {
+  const url = `${APP_URL}/articles/${articleId}/comments/${commentId}/like_status`;
+  return axios.post(url, data, headers)
+    .then((response) => {
+      dispatch(LikeDislikeSuccessful(
+        { StatusCode: response.status, like_status: data.like_status, commentId },
+      ));
+    })
+    .catch((error) => {
+      dispatch(LikeDislikefail(error.response));
     });
 };

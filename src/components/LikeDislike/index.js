@@ -17,18 +17,18 @@ const createButton = (onClick, icon, cssClass, likeDislikeCount, id) => (
 );
 
 const LikeDislike = ({
-  onLikeDislike, likes, dislikes,
+  onLikeDislike, likes, dislikes, commentId,
 }) => {
   const buttons = [
     {
-      onClick: (() => { onLikeDislike('like'); }),
+      onClick: (() => { onLikeDislike('like', commentId); }),
       icon: 'thumbs-up',
       cssClass: 'mr-4',
       likeDislikeCount: likes,
       id: 'bt-like',
     },
     {
-      onClick: (() => { onLikeDislike('dislike'); }),
+      onClick: (() => { onLikeDislike('dislike', commentId); }),
       icon: 'thumbs-down',
       cssClass: '',
       likeDislikeCount: dislikes,
@@ -50,6 +50,11 @@ LikeDislike.propTypes = {
   onLikeDislike: PropTypes.func.isRequired,
   likes: PropTypes.number.isRequired,
   dislikes: PropTypes.number.isRequired,
+  commentId: PropTypes.number,
+};
+
+LikeDislike.defaultProps = {
+  commentId: 0,
 };
 
 export default LikeDislike;

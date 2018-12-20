@@ -5,7 +5,19 @@ import actionTypes from '../../actions/commentActions/actionTypes';
 describe(' Testing Comment reducer', () => {
   const initialState = {
     getCommentData: {
-      results: [],
+      results: [{
+        comment_author: {
+          email: 'sulaiman@andela.com',
+          id: 7,
+          username: 'Sulaiman',
+        },
+        comment_body: 'This is my new comment',
+        created_at: '2018-12-18T09:17:27.663306Z',
+        dislikes: 1,
+        id: 2,
+        likes: 1,
+        updated_at: '2018-12-18T09:17:27.663367Z',
+      }],
     },
   };
   const FailResults = {
@@ -82,5 +94,56 @@ describe(' Testing Comment reducer', () => {
     expect(commentReducer(initialState,
       actions(actionTypes.POST_COMMENT_FAIL, FailResults)))
       .toEqual(expectedData);
+  });
+
+  test('LIKE_COMMENT_FAIL action', () => {
+    const expectedData = {
+      ...initialState,
+      LikestatusFail: FailResults,
+    };
+    expect(commentReducer(initialState,
+      actions(actionTypes.LIKEDISLIKEFAIL, FailResults)))
+      .toEqual(expectedData);
+  });
+
+  test('LIKE_COMMENT_SUCCESSFUL action', () => {
+    const likedata = (code, status) => ({
+      StatusCode: code, like_status: status, commentId: 2,
+    });
+    const action = data => ({
+      type: actionTypes.LIKEDISLIKESUCCESSFUL,
+      payload: data,
+    });
+    const expectedData = (numlikes, numdislikes) => ({
+      getCommentData: {
+        results: [{
+          comment_author: {
+            email: 'sulaiman@andela.com',
+            id: 7,
+            username: 'Sulaiman',
+          },
+          comment_body: 'This is my new comment',
+          created_at: '2018-12-18T09:17:27.663306Z',
+          dislikes: numdislikes,
+          id: 2,
+          likes: numlikes,
+          updated_at: '2018-12-18T09:17:27.663367Z',
+        }],
+      },
+    });
+    expect(commentReducer(initialState,
+      action(likedata(200, 'like')))).toEqual(expectedData(2, 0));
+    expect(commentReducer(initialState,
+      action(likedata(201, 'like')))).toEqual(expectedData(3, 0));
+    expect(commentReducer(initialState,
+      action(likedata(202, 'like')))).toEqual(expectedData(2, 0));
+    expect(commentReducer(initialState,
+      action(likedata(400, 'like')))).toEqual(expectedData(2, 0));
+    expect(commentReducer(initialState,
+      action(likedata(200, 'dislike')))).toEqual(expectedData(1, 1));
+    expect(commentReducer(initialState,
+      action(likedata(201, 'dislike')))).toEqual(expectedData(1, 2));
+    expect(commentReducer(initialState,
+      action(likedata(202, 'dislike')))).toEqual(expectedData(1, 1));
   });
 });

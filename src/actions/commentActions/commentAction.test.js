@@ -5,6 +5,7 @@ import actionTypes from './actionTypes';
 import {
   AllComments, CommentInput, PostComment, allCommentsFail,
   allCommentsSuccessful, postCommentFail, postCommentSuccessful,
+  LikeDislikeComment,
 } from './index';
 import APP_URL from '../../utils/constants';
 
@@ -31,7 +32,9 @@ describe('Test Comment actions', () => {
       payload: data,
     }));
   const articleId = 1;
+  const commentId = 4;
   const url = `${APP_URL}/articles/${articleId}/comments`;
+  const url2 = `${APP_URL}/articles/${articleId}/comments/${commentId}/like_status`;
 
   const request = () => (
     moxios.stubRequest(url, Notfound())
@@ -127,5 +130,27 @@ describe('Test Comment actions', () => {
   test('Post Comment Fail', () => {
     request();
     testCatch(PostComment, actionTypes.POST_COMMENT_FAIL);
+  });
+
+  test('Like Comment Pass', () => {
+    moxios.stubRequest(url2, {
+      status: 200,
+      responseText: {
+        results: { comment: 'My Fisrt comment' },
+      },
+    });
+    store.dispatch(LikeDislikeComment(articleId, commentId, passData)).then(() => {
+      expect(store.getActions())
+        .toEqual(expectedobject(actionTypes.LIKEDISLIKESUCCESSFUL));
+    }).catch(() => {
+    });
+  });
+
+  test('Like Comment Fail', () => {
+    moxios.stubRequest(url2, Notfound());
+    store.dispatch(LikeDislikeComment(articleId, commentId, passData)).catch(() => {
+      expect(store.getActions())
+        .toEqual(expect.objectContaining(expectedActionsFail(actionTypes.LIKEDISLIKEFAIL)));
+    });
   });
 });
