@@ -34,6 +34,7 @@ describe('Login Actions tests', () => {
     };
     expect(postRatingFailed(errorMessage)).toEqual(expectedAction);
   });
+
   test('Successful get and post rating action', () => {
     expect(ratingSuccess(rate)).toEqual(expect.objectContaining(
       actionTypesData(ACTION_TYPE.GET_RATING_SUCCESS, rate),
