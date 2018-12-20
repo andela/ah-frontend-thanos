@@ -14,6 +14,7 @@ import ProfileConnected from '../../containers/profiles/profiles';
 import EditProfilePageConnected from '../../containers/profiles/editProfile';
 import PasswordResetPage from '../../containers/PasswordResetPage';
 import NewPasswordPage from '../../containers/PasswordResetPage/newpasswordPage';
+import CreateArticlePage from '../../containers/CreateArticlePage';
 
 library.add(faSearch);
 const App = () => (
@@ -30,6 +31,7 @@ const App = () => (
         <Route path="/profiles/edit" component={EditProfilePageConnected} />
         <Route path="/passwordreset" component={PasswordResetPage} />
         <Route path="/newpassword" component={NewPasswordPage} exact />
+        <Route path="/createArticle" component={CreateArticlePage} />
       </Switch>
       <Notification />
       <FooterConnected />

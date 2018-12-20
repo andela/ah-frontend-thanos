@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateArticlePage /> should render the component 1`] = `
+<Connect(CreateArticlePage)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CreateArticlePage
+    articleData={[Function]}
+    createArticleReducer={
+      Object {
+        "articlePostData": Object {
+          "tag_list": "one,two",
+          "title": 1,
+        },
+      }
+    }
+    postArticle={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
+    updateImage={[Function]}
+  >
+    <div>
+      <CreateArticle
+        onChange={[Function]}
+        onClick={[Function]}
+        onSubmit={[Function]}
+      >
+        <div>
+          <br />
+          <h3
+            className="text-center createArticleTitle"
+          >
+            Create Your Article
+          </h3>
+          <hr
+            className="col-sm-8 "
+          />
+          <br />
+          <div
+            className="col-sm-10 offset-2 artcileCreate"
+          >
+            <form
+              className="create-article-form"
+              onSubmit={[Function]}
+            >
+              <h5>
+                Title: 
+              </h5>
+              <small>
+                Title must be 130 characters maximum and 5 characters minimum
+              </small>
+              <div
+                className="form-group"
+              >
+                <textarea
+                  className="form-control"
+                  id="titleInput"
+                  maxLength="130"
+                  minLength="5"
+                  name="title"
+                  onChange={[Function]}
+                  required={true}
+                  rows="3"
+                />
+              </div>
+              <h5>
+                Description
+              </h5>
+              <small>
+                Title must be 150 characters maximum and 100 characters minimum
+              </small>
+              <div
+                className="form-group"
+              >
+                <textarea
+                  className="form-control"
+                  id="descriptionInput"
+                  maxLength="120"
+                  minLength="100"
+                  name="description"
+                  onChange={[Function]}
+                  required={true}
+                  rows="3"
+                />
+              </div>
+              <h5>
+                Tag list
+              </h5>
+              <div
+                className="form-group"
+              >
+                <textarea
+                  className="form-control"
+                  id="tag_listInput"
+                  name="tag_list"
+                  onChange={[Function]}
+                  required={true}
+                  rows="3"
+                />
+              </div>
+              <br />
+              <h5>
+                Upload Image
+              </h5>
+              <div
+                className="col-lg-8 mt-2"
+              >
+                <input
+                  className="image"
+                  name="image_url"
+                  onClick={[Function]}
+                  type="file"
+                />
+              </div>
+              <br />
+              <h5>
+                Body
+              </h5>
+              <div
+                className="form-group"
+              >
+                <textarea
+                  className="form-control"
+                  id="bodyInput"
+                  name="body"
+                  onChange={[Function]}
+                  required={true}
+                  rows="3"
+                />
+              </div>
+              <div
+                className="signin-createArticleBt"
+              >
+                <button
+                  className="btn btn-primary"
+                  id="createArticleBt"
+                  name="createArticleBt"
+                  type="submit"
+                >
+                  Publish Article
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </CreateArticle>
+    </div>
+  </CreateArticlePage>
+</Connect(CreateArticlePage)>
+`;

@@ -24,10 +24,16 @@
       background: white;
       vertical-align: 10px;
       width: 30%;
+      margin-left: 10px; 
       padding-top: 23px;
       justify-content: space-around;
       font-size: 18px;
       font-family: "Roboto Condensed", sans-serif;
+      .dropdown-single.active, .dropdown-single:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #47d79f;
+    }
       a {
         color: black;
         text-decoration: none;

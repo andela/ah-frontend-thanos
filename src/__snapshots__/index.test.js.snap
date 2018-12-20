@@ -44,6 +44,10 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       exact={true}
       path="/newpassword"
     />
+    <Route
+      component={[Function]}
+      path="/createArticle"
+    />
   </Switch>
   <_class
     options={Object {}}

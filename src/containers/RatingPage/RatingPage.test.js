@@ -24,7 +24,7 @@ describe('<RatingPage />', () => {
     expect(RatingPageComponent).toMatchSnapshot();
   });
 
-  it('should dispatch a method to get user input', () => {
+  it('should dispatch a method to rating input', () => {
     const dispatch = jest.fn();
     mapDispatchToProps(dispatch).ratingData({});
     mapDispatchToProps(dispatch).ratingArticle({});
