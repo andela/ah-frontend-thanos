@@ -1,8 +1,8 @@
 engines:
-  duplication:
-    enabled: true
-    config:
-      languages:
-        javascript:
-          mass_threshold: 75
-          
+ duplication:
+   enabled: true
+   config:
+     languages:
+       javascript:
+         mass_threshold: 75
+         

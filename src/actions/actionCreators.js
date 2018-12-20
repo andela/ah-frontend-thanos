@@ -6,6 +6,7 @@ export const SocialLogin = () => ({
 export const LogIn = () => ({
   type: ACTION_TYPES.LOGIN,
 });
+
 export const socialLoginFailure = response => ({
   type: ACTION_TYPES.SOCIAL_LOGIN_FAILURE,
   payload: response,

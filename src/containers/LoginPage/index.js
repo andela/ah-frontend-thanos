@@ -24,7 +24,6 @@ export class LoginPage extends Component {
   handleSubmit(event) {
     const { loginUser } = this.props;
     event.preventDefault();
-
     loginUser(this.state);
   }
 

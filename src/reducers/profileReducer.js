@@ -27,13 +27,11 @@ const profileReducer = (state = initialState, action) => {
     case actionTypes.EDIT_PROFILE:
       return {
         ...state,
-        profile: {
-          ...profile,
-          ...action.payload,
-        },
+        profile: { ...profile, ...action.payload },
       };
     case actionTypes.GET_PROFILE_ERROR:
       swal({ ...swalMessages.PROFILE_ERROR });
+      window.location.replace('/');
       return { ...state, profile: action.profile };
     default:
       return state;

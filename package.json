@@ -76,7 +76,7 @@
     "node-sass": "^4.10.0",
     "popper.js": "^1.14.5",
     "prop-types": "^15.6.2",
-    "puppeteer": "^1.10.0",
+    "puppeteer": "^1.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-facebook-login": "^4.1.1",

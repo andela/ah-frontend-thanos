@@ -3,16 +3,13 @@ import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { Login } from '../../components/Login';
+import Login from '../../components/Login';
 import { LoginPage, mapDispatchToProps } from './index';
 
 let mockStore = configureMockStore([thunk]);
 let store = mockStore({});
 
 describe('<Login />', () => {
-  global.___loader = { // eslint-disable-line no-underscore-dangle
-    enqueue: jest.fn(),
-  };
   test('renders the component', () => {
     mockStore = configureMockStore([thunk]);
     store = mockStore({});

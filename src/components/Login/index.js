@@ -8,7 +8,7 @@ import SocialLogin from './socialLogin';
 
 library.add(fab);
 
-export const Login = ({ onChange, onSubmit }) => {
+const Login = ({ onChange, onSubmit }) => {
   const loginHtml = (
     <div className="container login-box">
       <div className="col-left">
@@ -29,7 +29,6 @@ export const Login = ({ onChange, onSubmit }) => {
               id="email"
               pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
               title="Please provide a valid email address"
-              required
               onChange={onChange}
             />
           </div>
@@ -40,7 +39,6 @@ export const Login = ({ onChange, onSubmit }) => {
               name="password"
               className="form-control"
               id="password"
-              required
               onChange={onChange}
             />
           </div>
@@ -50,6 +48,7 @@ export const Login = ({ onChange, onSubmit }) => {
               className="btn btn-primary sign-in-bt"
               id="signInBt"
               name="signInBt"
+              onClick={onSubmit}
             >
               Sign In
             </button>
