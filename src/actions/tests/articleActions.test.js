@@ -7,6 +7,7 @@ import {
   fetchArticlesSuccess,
   fetchArticlesFailure,
   fetchArticlesThunk,
+  showErrorAction,
 } from '../articleActions';
 import ACTION_TYPE from '../actionTypes';
 import APP_URL from '../../utils/constants';
@@ -83,6 +84,15 @@ describe('Article component', () => {
       articles: article,
     };
     expect(fetchArticlesSuccess(article)).toEqual(expectedAction);
+  });
+
+  it('should return an error on unsuccessful fetching of all articles', () => {
+    const payload = { error: 'Some error' };
+    const expectedAction = {
+      type: ACTION_TYPE.SHOW_ERROR,
+      payload,
+    };
+    expect(showErrorAction(payload)).toEqual(expectedAction);
   });
 
   it('should create an action on failure to fetch all articles', () => {

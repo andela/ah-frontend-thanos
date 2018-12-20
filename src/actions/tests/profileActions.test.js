@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import ACTION_TYPE from '../actionTypes';
 import { getProfile, getProfileError, editProfile } from '../actionCreators';
 import { getProfileAction, editProfileAction } from '../profileActions';
+import APP_URL from '../../utils/constants';
 
 const mockStore = configureMockStore([thunk]);
 
@@ -15,7 +16,7 @@ describe('Test Profile actions', () => {
     moxios.install();
     store = mockStore({});
     testUser = 'johnDoe';
-    url = `https://ah-backend-thanos-staging.herokuapp.com/api/profiles/${testUser}`;
+    url = `${APP_URL}/profiles/${testUser}`;
   });
   afterEach(() => {
     moxios.uninstall();

@@ -1,8 +1,8 @@
 import axios from 'axios';
 import swal from 'sweetalert2';
 import actionTypes from './actionTypes';
-import APP_URL from '../utils/constants';
 import { SocialLogin, LogIn, socialLoginFailure } from './actionCreators';
+import APP_URL from '../utils/constants';
 
 export const signupSuccessful = response => ({
   type: actionTypes.USER_REGISTER_SUCCESS,
