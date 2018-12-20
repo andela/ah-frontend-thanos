@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import UrlLink from '../../components/link';
 
 const navbarIcon = (
@@ -15,9 +16,33 @@ const navbarIcon = (
   </button>
 );
 
+export const navDropDown = (link, displayName) => (
+  <div>
+    <div className="dropdown-divider" />
+    <NavLink className="dropdown-item dropdown-single" to={link}>{displayName}</NavLink>
+  </div>
+
+);
+
 export const navbarLinks = (
   <ul className="navbar-nav mr-auto mt-1 mt-lg-0 nav-1">
-    <UrlLink link="/articles" linkName="ARTICLES" />
+    <li className="nav-item dropdown">
+      <NavLink
+        className="nav-link dropdown-toggle"
+        to="/articles"
+        id="navbarDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        ARTICLES
+      </NavLink>
+      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+        {navDropDown('/articles', 'All articles')}
+        {navDropDown('/createarticle', 'Create Article')}
+      </div>
+    </li>
     <UrlLink link="/about" linkName="ABOUT" />
     <UrlLink link="/contact" linkName="CONTACT" />
   </ul>

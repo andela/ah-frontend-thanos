@@ -40,12 +40,14 @@ class CreateArticlePage extends Component {
   }
 
   render() {
+    const { article } = this.props;
     return (
       <div>
         <CreateArticle
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
           onClick={this.handleOnClick}
+          article={article}
         />
       </div>
     );
@@ -57,10 +59,13 @@ CreateArticlePage.propTypes = {
   articleData: PropTypes.func.isRequired,
   createArticleReducer: PropTypes.shape({}).isRequired,
   updateImage: PropTypes.func.isRequired,
+  article: PropTypes.shape({}).isRequired,
 };
 
-
-const mapStateToProps = ({ createArticleReducer }) => ({ createArticleReducer });
+const mapStateToProps = ({ createArticleReducer, articleReducer }) => ({
+  createArticleReducer,
+  article: articleReducer.article,
+});
 
 export const mapDispatchToProps = dispatch => ({
   postArticle: response => dispatch(createArticleThunk(response)),

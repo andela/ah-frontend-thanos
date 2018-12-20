@@ -90,46 +90,118 @@ exports[`<Header /> component should render correctly 1`] = `
           <ul
             className="navbar-nav mr-auto mt-1 mt-lg-0 nav-1"
           >
-            <UrlLink
-              link="/articles"
-              linkName="ARTICLES"
+            <li
+              className="nav-item dropdown"
             >
-              <li
-                className="nav-item active"
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                aria-expanded="false"
+                aria-haspopup="true"
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                id="navbarDropdown"
+                role="button"
+                to="/articles"
               >
-                <NavLink
-                  activeClassName="active"
-                  aria-current="page"
-                  className="nav-link"
-                  to="/articles"
+                <Route
+                  path="\\\\/articles"
                 >
-                  <Route
-                    path="\\\\/articles"
+                  <Link
+                    aria-current={null}
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    id="navbarDropdown"
+                    replace={false}
+                    role="button"
+                    to="/articles"
                   >
-                    <Link
+                    <a
                       aria-current={null}
-                      className="nav-link"
-                      replace={false}
-                      to="/articles"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      className="nav-link dropdown-toggle"
+                      data-toggle="dropdown"
+                      href="/articles"
+                      id="navbarDropdown"
+                      onClick={[Function]}
+                      role="button"
                     >
-                      <a
+                      ARTICLES
+                    </a>
+                  </Link>
+                </Route>
+              </NavLink>
+              <div
+                aria-labelledby="navbarDropdown"
+                className="dropdown-menu"
+              >
+                <div>
+                  <div
+                    className="dropdown-divider"
+                  />
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="dropdown-item dropdown-single"
+                    to="/articles"
+                  >
+                    <Route
+                      path="\\\\/articles"
+                    >
+                      <Link
                         aria-current={null}
-                        className="nav-link"
-                        href="/articles"
-                        onClick={[Function]}
+                        className="dropdown-item dropdown-single"
+                        replace={false}
+                        to="/articles"
                       >
-                        ARTICLES
-                        <span
-                          className="sr-only"
+                        <a
+                          aria-current={null}
+                          className="dropdown-item dropdown-single"
+                          href="/articles"
+                          onClick={[Function]}
                         >
-                          (current)
-                        </span>
-                      </a>
-                    </Link>
-                  </Route>
-                </NavLink>
-              </li>
-            </UrlLink>
+                          All articles
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </div>
+                <div>
+                  <div
+                    className="dropdown-divider"
+                  />
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="dropdown-item dropdown-single"
+                    to="/createarticle"
+                  >
+                    <Route
+                      path="\\\\/createarticle"
+                    >
+                      <Link
+                        aria-current={null}
+                        className="dropdown-item dropdown-single"
+                        replace={false}
+                        to="/createarticle"
+                      >
+                        <a
+                          aria-current={null}
+                          className="dropdown-item dropdown-single"
+                          href="/createarticle"
+                          onClick={[Function]}
+                        >
+                          Create Article
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </div>
+              </div>
+            </li>
             <UrlLink
               link="/about"
               linkName="ABOUT"

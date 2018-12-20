@@ -131,6 +131,7 @@ exports[`<ArticlePage /> renders the container 1`] = `
               "views_count": 0,
             }
           }
+          onClick={[Function]}
           onLikeDislike={[Function]}
         >
           <div
@@ -1144,6 +1145,9 @@ exports[`<ArticlePage /> renders the container 1`] = `
                   </div>
                 </div>
               </ShareRow>
+              <div>
+                <span />
+              </div>
             </div>
           </div>
         </Article>

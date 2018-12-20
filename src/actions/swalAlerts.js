@@ -39,6 +39,18 @@ const swalMessages = {
     type: 'success',
     confirmButtonText: 'continue',
   },
+  EDIT_ARTICLE_SUCCESSFUL: {
+    title: 'Article edit',
+    text: 'Your article was successfully edited',
+    type: 'success',
+    confirmButtonText: 'continue',
+  },
+  EDIT_ARTICLE_FAILED: {
+    title: 'Oops',
+    text: 'You do not have permission to edit this article',
+    type: 'error',
+    confirmButtonText: 'continue',
+  },
 };
 
 export default swalMessages;

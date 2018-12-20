@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CreateArticlePage /> should render the component 1`] = `
-<Connect(CreateArticlePage)
+<Connect(EditArticlePage)
+  articleId={1}
+  history={
+    Object {
+      "push": [MockFunction],
+    }
+  }
+  match={
+    Object {
+      "params": Object {
+        "id": 1,
+      },
+    }
+  }
   store={
     Object {
       "clearActions": [Function],
@@ -13,18 +26,32 @@ exports[`<CreateArticlePage /> should render the component 1`] = `
     }
   }
 >
-  <CreateArticlePage
+  <EditArticlePage
     article="good work"
-    articleData={[Function]}
-    createArticleReducer={
+    articleId={1}
+    editArticle={[Function]}
+    editArticleReducer={
       Object {
-        "articlePostData": Object {
+        "articleEditData": Object {
           "tag_list": "one,two",
           "title": 1,
         },
       }
     }
-    postArticle={[Function]}
+    editData={[Function]}
+    history={
+      Object {
+        "push": [MockFunction],
+      }
+    }
+    loadEditData={[Function]}
+    match={
+      Object {
+        "params": Object {
+          "id": 1,
+        },
+      }
+    }
     store={
       Object {
         "clearActions": [Function],
@@ -59,7 +86,7 @@ exports[`<CreateArticlePage /> should render the component 1`] = `
     updateImage={[Function]}
   >
     <div>
-      <CreateArticle
+      <EditArticle
         article="good work"
         onChange={[Function]}
         onClick={[Function]}
@@ -70,7 +97,7 @@ exports[`<CreateArticlePage /> should render the component 1`] = `
           <h3
             className="text-center createArticleTitle"
           >
-            Create Your Article
+            Edit Your Article
           </h3>
           <hr
             className="col-sm-8 "
@@ -183,8 +210,8 @@ exports[`<CreateArticlePage /> should render the component 1`] = `
             </form>
           </div>
         </div>
-      </CreateArticle>
+      </EditArticle>
     </div>
-  </CreateArticlePage>
-</Connect(CreateArticlePage)>
+  </EditArticlePage>
+</Connect(EditArticlePage)>
 `;

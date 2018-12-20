@@ -237,6 +237,9 @@ exports[`<Article /> should render correctly 1`] = `
         }
       }
     />
+    <div>
+      <span />
+    </div>
   </div>
 </div>
 `;

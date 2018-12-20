@@ -17,6 +17,12 @@ export class ArticlePage extends Component {
     getArticleDispatch(articleId);
   }
 
+  handleOnClick = () => {
+    const { history, match } = this.props;
+    const { articleId } = match.params;
+    history.push(`/editarticle/${articleId}`);
+  }
+
   handleLikeDislike = (option) => {
     const { likeDislikeArticleDispatch, article, match } = this.props;
     const { likeDislikeStatus } = article;
@@ -33,7 +39,11 @@ export class ArticlePage extends Component {
     const { article, match } = this.props;
     return (
       <div>
-        <Article onLikeDislike={this.handleLikeDislike} article={article} />
+        <Article
+          onLikeDislike={this.handleLikeDislike}
+          article={article}
+          onClick={this.handleOnClick}
+        />
         <hr />
         <br />
         {article.id
@@ -51,6 +61,7 @@ ArticlePage.propTypes = {
   getArticleDispatch: PropTypes.func.isRequired,
   getLikeDislikeStatusDispatch: PropTypes.func.isRequired,
   article: PropTypes.shape({}).isRequired,
+  history: PropTypes.shape({}).isRequired,
 };
 
 const mapStateToProps = ({ articleReducer }) => ({

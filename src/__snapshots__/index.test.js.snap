@@ -103,6 +103,10 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       component={[Function]}
       path="/search"
     />
+    <Route
+      component={[Function]}
+      path="/editarticle/:articleId"
+    />
   </Switch>
   <_class
     options={Object {}}

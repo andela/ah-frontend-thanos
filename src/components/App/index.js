@@ -20,6 +20,8 @@ import Tags from '../TagList/viewTags';
 import FollowUnfollow from '../../containers/FollowUnfollow';
 import SearchPage from '../../containers/SearchPage';
 
+import EditArticlePage from '../../containers/editArticlePage';
+
 library.add(faSearch);
 const App = () => (
   <Router history={history}>
@@ -39,10 +41,10 @@ const App = () => (
         <Route path="/tags" component={Tags} />
         <Route exact path="/profiles/:username" component={FollowUnfollow} />
         <Route path="/search" component={SearchPage} />
+        <Route path="/editarticle/:articleId" component={EditArticlePage} />
       </Switch>
       <Notification />
       <FooterConnected />
-
     </React.Fragment>
   </Router>
 );
