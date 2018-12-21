@@ -1,0 +1,972 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchPage /> component should render correctly 1`] = `
+<SearchPage
+  author="jack"
+  fetchSearchArticlesDispatch={[MockFunction]}
+  searchArticles={
+    Array [
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 1,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 2,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 3,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 4,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 5,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 6,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 7,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 8,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+      Object {
+        "audio_url": "http://test.mp3",
+        "author": Object {
+          "email": "janedoe@gmail.com",
+          "id": 2,
+          "username": "janedoe",
+        },
+        "body": "body",
+        "created_at": "12-12-2018",
+        "description": "desc",
+        "dislikes": 2,
+        "id": 9,
+        "image_url": "http://test.png",
+        "likeDislikeStatus": "dislike",
+        "likes": 12,
+        "rating": 0,
+        "read_time": "0 min",
+        "slug": "title-sample",
+        "tag_list": Array [
+          "tag",
+        ],
+        "title": "title sample",
+        "updated_at": "12-12-2018",
+        "views_count": 0,
+      },
+    ]
+  }
+  searchQuery="test"
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  tag="tag"
+  title="title"
+  updateFilterFieldDispatch={[MockFunction]}
+>
+  <div
+    className="articles-body"
+  >
+    <Filter
+      onChange={[Function]}
+      onClick={[Function]}
+      searchQuery="test"
+    >
+      <div
+        className="container filter-box pt-3 text-center"
+      >
+        <h6>
+          Search or Filter by:
+        </h6>
+        <input
+          className="p-1 m-1"
+          id="title"
+          name="title"
+          onChange={[Function]}
+          placeholder="Title"
+          type="text"
+        />
+        <input
+          className="p-1 m-1"
+          id="tag"
+          name="tag"
+          onChange={[Function]}
+          placeholder="Tag"
+          type="text"
+        />
+        <input
+          className="p-1 m-1"
+          id="author"
+          name="author"
+          onChange={[Function]}
+          placeholder="Author"
+          type="text"
+        />
+        <button
+          className="btn btn-primary btn-sm"
+          id="btFilter"
+          onClick={[Function]}
+          type="button"
+        >
+          Filter
+        </button>
+      </div>
+    </Filter>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 1,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="1"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/1"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 2,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="2"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/2"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 3,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="3"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/3"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 4,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="4"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/4"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 5,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="5"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/5"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 6,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="6"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/6"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 7,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="7"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/7"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 8,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="8"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/8"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+    <ArticleDisplay
+      article={
+        Object {
+          "audio_url": "http://test.mp3",
+          "author": Object {
+            "email": "janedoe@gmail.com",
+            "id": 2,
+            "username": "janedoe",
+          },
+          "body": "body",
+          "created_at": "12-12-2018",
+          "description": "desc",
+          "dislikes": 2,
+          "id": 9,
+          "image_url": "http://test.png",
+          "likeDislikeStatus": "dislike",
+          "likes": 12,
+          "rating": 0,
+          "read_time": "0 min",
+          "slug": "title-sample",
+          "tag_list": Array [
+            "tag",
+          ],
+          "title": "title sample",
+          "updated_at": "12-12-2018",
+          "views_count": 0,
+        }
+      }
+      key="9"
+    >
+      <div
+        className="article-card"
+      >
+        <div
+          className="image-wrapper"
+        >
+          <img
+            alt="poster"
+            src="http://test.png"
+          />
+        </div>
+        <div
+          className="text-section"
+        >
+          <div
+            className="title-section"
+          >
+            title sample
+          </div>
+          <div
+            className="body-section"
+          >
+            desc
+          </div>
+          <div
+            className="read-more"
+          >
+            <a
+              href="/article/9"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ArticleDisplay>
+  </div>
+</SearchPage>
+`;
+
+exports[`<SearchPage /> component should render empty page with no search results 1`] = `
+<SearchPage
+  author="jack"
+  fetchSearchArticlesDispatch={[MockFunction]}
+  searchArticles={Array []}
+  searchQuery="test"
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  tag="tag"
+  title="title"
+  updateFilterFieldDispatch={[MockFunction]}
+>
+  <div
+    className="container large-bottom mt-4 text-center"
+  >
+    <Filter
+      onChange={[Function]}
+      onClick={[Function]}
+      searchQuery="test"
+    >
+      <div
+        className="container filter-box pt-3 text-center"
+      >
+        <h6>
+          Search or Filter by:
+        </h6>
+        <input
+          className="p-1 m-1"
+          id="title"
+          name="title"
+          onChange={[Function]}
+          placeholder="Title"
+          type="text"
+        />
+        <input
+          className="p-1 m-1"
+          id="tag"
+          name="tag"
+          onChange={[Function]}
+          placeholder="Tag"
+          type="text"
+        />
+        <input
+          className="p-1 m-1"
+          id="author"
+          name="author"
+          onChange={[Function]}
+          placeholder="Author"
+          type="text"
+        />
+        <button
+          className="btn btn-primary btn-sm"
+          id="btFilter"
+          onClick={[Function]}
+          type="button"
+        >
+          Filter
+        </button>
+      </div>
+    </Filter>
+    <h4
+      className="mt-5"
+    >
+      No results found
+    </h4>
+  </div>
+</SearchPage>
+`;

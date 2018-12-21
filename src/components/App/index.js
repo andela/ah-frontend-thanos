@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Notification from 'react-notify-toast';
+import { Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import history from '../../commons/history';
 import Home from '../Home';
 import LoginPage from '../../containers/LoginPage';
-import Header from '../Header';
 import FooterConnected from '../../containers/Footer';
+import Header from '../../containers/Header';
 import SignUpPageConnected from '../../containers/SignUpPage';
 import Articles from '../../containers/Articles';
 import ArticlePageConnected from '../../containers/ArticlePage';
@@ -17,12 +18,13 @@ import NewPasswordPage from '../../containers/PasswordResetPage/newpasswordPage'
 import CreateArticlePage from '../../containers/CreateArticlePage';
 import Tags from '../TagList/viewTags';
 import FollowUnfollow from '../../containers/FollowUnfollow';
+import SearchPage from '../../containers/SearchPage';
 
 library.add(faSearch);
 const App = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <React.Fragment>
-      <Header />
+      <Header history={history} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={LoginPage} />
@@ -36,12 +38,13 @@ const App = () => (
         <Route path="/createArticle" component={CreateArticlePage} />
         <Route path="/tags" component={Tags} />
         <Route exact path="/profiles/:username" component={FollowUnfollow} />
+        <Route path="/search" component={SearchPage} />
       </Switch>
       <Notification />
       <FooterConnected />
 
     </React.Fragment>
-  </BrowserRouter>
+  </Router>
 );
 
 export default App;

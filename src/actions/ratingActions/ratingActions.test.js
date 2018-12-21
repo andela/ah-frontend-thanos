@@ -61,7 +61,7 @@ describe('Login Actions tests', () => {
     moxios.stubRequest(`${APP_URL}/articles/7/rating`, statusData(200, { message: 'ok' }));
     store.dispatch(postRating(7)).then(() => {
       expect(store.getActions()).toEqual(expect.objectContaining(
-        actionTypesData(ACTION_TYPE.POST_RATING_SUCCESS, { message: 'ok' }),
+        [actionTypesData(ACTION_TYPE.POST_RATING_SUCCESS, { message: 'ok' })],
       ));
     });
   });
