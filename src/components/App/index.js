@@ -21,18 +21,19 @@ import FollowUnfollow from '../../containers/FollowUnfollow';
 import SearchPage from '../../containers/SearchPage';
 
 import EditArticlePage from '../../containers/editArticlePage';
+import ReportArticle from '../../containers/ReportArticlePage';
 
 library.add(faSearch);
 const App = () => (
   <Router history={history}>
     <React.Fragment>
       <Header history={history} />
+      <Notification />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignUpPageConnected} />
         <Route path="/articles" component={Articles} />
-        <Route path="/article/:articleId" component={ArticlePageConnected} />
         <Route path="/profile" component={ProfileConnected} />
         <Route path="/profiles/edit" component={EditProfilePageConnected} />
         <Route path="/passwordreset" component={PasswordResetPage} />
@@ -42,11 +43,12 @@ const App = () => (
         <Route exact path="/profiles/:username" component={FollowUnfollow} />
         <Route path="/search" component={SearchPage} />
         <Route path="/editarticle/:articleId" component={EditArticlePage} />
+        <Route path="/article/:articleId/report" component={ReportArticle} />
+        <Route exact path="/article/:articleId" component={ArticlePageConnected} />
+
       </Switch>
-      <Notification />
       <FooterConnected />
     </React.Fragment>
   </Router>
 );
-
 export default App;

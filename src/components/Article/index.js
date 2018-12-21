@@ -17,15 +17,9 @@ import RatingPage from '../../containers/RatingPage';
 import ShareRow from './shareRow';
 import DeleteArticlePage from '../../containers/deleteArticle';
 
-library.add(
-  faUser,
-  faClock,
-  faCalendar,
-  faEye,
-  faCheck,
-  faThumbsUp,
-  faThumbsDown,
-);
+import generateRedirectLinks from '../../commons/redirectLinks';
+
+library.add(faUser, faClock, faCalendar, faEye, faCheck, faThumbsUp, faThumbsDown);
 
 const createIconSection = (icon, cssClass, content) => (
   <span key={cssClass}>
@@ -114,6 +108,7 @@ const Article = ({ onLikeDislike, article, onClick }) => {
           ) : (
             <span />
           )}
+          {generateRedirectLinks('', `article/${article.id}/report`, 'Report article')}
         </div>
       </div>
     </div>

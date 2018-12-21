@@ -12,6 +12,7 @@ import followUnfollowReducer from './followUnfollowReducer';
 import searchReducer from './searchReducer';
 import editArticleReducer from './editArticleReducer/editArticleReducer';
 import deleteArticleReducer from './deleteArticleReducer/deleteArticleReducer';
+import reportReducer from './reportReducer/reportReducer';
 
 const reducer = combineReducers({
   loginReducer,
@@ -27,6 +28,7 @@ const reducer = combineReducers({
   searchReducer,
   editArticleReducer,
   deleteArticleReducer,
+  reportReducer,
 });
 
 export default reducer;

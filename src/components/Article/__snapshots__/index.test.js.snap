@@ -239,6 +239,16 @@ exports[`<Article /> should render correctly 1`] = `
     />
     <div>
       <span />
+      <div
+        className="small mt-3"
+      >
+        <span />
+        <a
+          href="/article/1/report"
+        >
+          Report article
+        </a>
+      </div>
     </div>
   </div>
 </div>
