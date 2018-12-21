@@ -15,6 +15,7 @@ import './article.scss';
 import LikeDislike from '../LikeDislike';
 import RatingPage from '../../containers/RatingPage';
 import ShareRow from './shareRow';
+import DeleteArticlePage from '../../containers/deleteArticle';
 
 library.add(
   faUser,
@@ -95,18 +96,21 @@ const Article = ({ onLikeDislike, article, onClick }) => {
           </div>
         </div>
       </div>
-      <div className="share">
+      <div className="share container">
         <ShareRow article={article} />
         <div>
           {article.author.username === loggedinUser ? (
-            <button
-              type="button"
-              onClick={onClick}
-              id="edit-bt"
-              className="btn btn-success"
-            >
-              Edit Article
-            </button>
+            <div id="edit-del-bt">
+              <button
+                type="button"
+                onClick={onClick}
+                id="edit-bt"
+                className="btn btn-success"
+              >
+                EDIT ARTICLE
+              </button>
+              <DeleteArticlePage articleId={article.id} />
+            </div>
           ) : (
             <span />
           )}

@@ -26,6 +26,7 @@ const initialState = {
     articles: [],
     errorMessage: '',
   },
+  deleteArticleReducer: {},
   socialLoginReducer: { isLoggedIn: false },
   loginReducer: { errorMessage: '', successMessage: '', user_details: '' },
   createArticleReducer: {},

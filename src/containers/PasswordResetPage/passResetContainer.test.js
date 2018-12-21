@@ -25,6 +25,7 @@ describe('handle Invoke email for password reset', () => {
     const evt = { target: { id: 12, value: 'Likes' } };
     expect(wrapper.instance().handleChange(evt));
   });
+
   it('should submit user email for passwordreset', () => {
     component
       .find('input#email')

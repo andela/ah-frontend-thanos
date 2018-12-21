@@ -34,6 +34,7 @@ describe('<ArticlePage />', () => {
         getCommentData: { results: [] },
       },
       ratingReducer: { rating: 1 },
+      deleteArticleReducer: {},
     };
     mockStore = configureStore([thunk]);
 

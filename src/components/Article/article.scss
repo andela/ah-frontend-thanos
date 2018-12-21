@@ -14,9 +14,13 @@ $primaryDarker: #345F5B;
         font-family: $headingFontFamily;
         color: $primaryDarker;
     }
+    #edit-del-bt{
+        display: flex;
+    }
     #edit-bt {
         padding: 10px;
-        font-size: 12px
+        font-size: 12px;
+        margin-right: 5px;
     }
     .article-image {
         padding: 30px 0;

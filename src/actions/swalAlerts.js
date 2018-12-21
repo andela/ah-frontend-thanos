@@ -15,6 +15,13 @@ const swalMessages = {
     type: 'success',
     confirmButtonText: 'continue',
   },
+  ARTICLE_DELETED_SUCCESSFUL: {
+    title: 'Article deleted',
+    text: 'Your article was deleted successfully',
+    type: 'success',
+    showConfirmButton: false,
+    timer: 3000,
+  },
   REGISTRATION_ERROR: {
     title: 'Unable to complete registration',
     text: '',
@@ -50,6 +57,11 @@ const swalMessages = {
     text: 'You do not have permission to edit this article',
     type: 'error',
     confirmButtonText: 'continue',
+  },
+  DELETE_ERROR: {
+    title: 'Delete failed',
+    text: 'You can only delete an article you created',
+    type: 'error',
   },
 };
 
