@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FollowUnfollow /> container should render <FollowUnfollow /> container 1`] = `
+<FollowUnfollow
+  currentProfile={
+    Object {
+      "bio": "",
+      "created_at": "",
+      "first_name": "",
+      "image": "",
+      "isFollowee": false,
+      "last_name": "",
+      "updated_at": "",
+      "username": "",
+    }
+  }
+  followDispatch={[MockFunction]}
+  followeesList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "https://picsum.photos/600",
+        "isFollowee": false,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
+  followersList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "",
+        "isFollowee": false,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
+  getFollowProfilesDispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "https://ah-backend-thanos-staging.herokuapp.com/api/users/undefined/followers",
+          true,
+        ],
+        Array [
+          "https://ah-backend-thanos-staging.herokuapp.com/api/users/undefined/following",
+          false,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  getProfileDispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "token": null,
+            "username": undefined,
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  match={
+    Object {
+      "params": Object {
+        "urlObject": Object {
+          "username": "janedoe",
+        },
+      },
+    }
+  }
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  unfollowDispatch={[MockFunction]}
+>
+  <div>
+    <UserProfile
+      currentProfile={
+        Object {
+          "bio": "",
+          "created_at": "",
+          "first_name": "",
+          "image": "",
+          "isFollowee": false,
+          "last_name": "",
+          "updated_at": "",
+          "username": "",
+        }
+      }
+      followeesList={
+        Array [
+          Object {
+            "bio": "",
+            "created_at": "",
+            "first_name": "",
+            "image": "https://picsum.photos/600",
+            "isFollowee": false,
+            "last_name": "",
+            "updated_at": "",
+            "username": "",
+          },
+        ]
+      }
+      followersList={
+        Array [
+          Object {
+            "bio": "",
+            "created_at": "",
+            "first_name": "",
+            "image": "",
+            "isFollowee": false,
+            "last_name": "",
+            "updated_at": "",
+            "username": "",
+          },
+        ]
+      }
+      onClick={[Function]}
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="profile-box"
+        >
+          <div
+            className="lefter"
+          >
+            <div
+              className="profile-image"
+            >
+              <img
+                alt="profile dp"
+                src=""
+              />
+            </div>
+            <div
+              className="profile-username"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="icon"
+                fixedWidth={false}
+                flip={null}
+                icon="user"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-user fa-w-14 icon"
+                  data-icon="user"
+                  data-prefix="fas"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </FontAwesomeIcon>
+              <span
+                className="ml-2"
+              />
+            </div>
+            <Follow
+              onClick={[Function]}
+              option={false}
+            >
+              <button
+                className="btn btn-outline-primary btn-sm m-2"
+                id="bt-follow"
+                onClick={[Function]}
+                type="button"
+              >
+                Follow
+              </button>
+            </Follow>
+          </div>
+          <div
+            className="righter"
+          >
+            <div
+              className="profile-first-name"
+            >
+              <div
+                className="small grey"
+              >
+                First Name:
+              </div>
+              <span />
+            </div>
+            <div
+              className="profile-last-name"
+            >
+              <div
+                className="small grey"
+              >
+                Last Name:
+              </div>
+              <span />
+            </div>
+            <div
+              className="profile-bio"
+            >
+              <div
+                className="small grey"
+              >
+                Bio:
+              </div>
+              <span />
+            </div>
+            <div
+              className="profile-created-at"
+            >
+              <div
+                className="small grey"
+              >
+                Proud user since:
+              </div>
+              <span />
+            </div>
+          </div>
+        </div>
+        <div
+          className="follow-box"
+        >
+          <div
+            className="followers-box"
+          >
+            <h6>
+              People following 
+            </h6>
+            <div
+              key=""
+            >
+              <div
+                className="follower-image"
+              >
+                <a
+                  href="/profiles/"
+                >
+                  <img
+                    alt="dp"
+                    src="https://iviidev.info/downloads/images/anon.png"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="followees-box"
+          >
+            <h6>
+              People  follows
+            </h6>
+            <div
+              key=""
+            >
+              <div
+                className="follower-image"
+              >
+                <a
+                  href="/profiles/"
+                >
+                  <img
+                    alt="dp"
+                    src="https://picsum.photos/600"
+                    title="  ()"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UserProfile>
+  </div>
+</FollowUnfollow>
+`;

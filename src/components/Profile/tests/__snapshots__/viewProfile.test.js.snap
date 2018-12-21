@@ -1,7 +1,168 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Profile component renders ViewProfile 1`] = `
+<ViewProfile
+  bio=""
+  followeesList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "",
+        "isFollowee": true,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
+  followersList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "",
+        "isFollowee": true,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
+  image=""
+  username=""
+>
+  <div
+    className="w-100"
+  >
+    <div
+      className="container mt-5 mb-5 container"
+    >
+      <h1
+        className="viewProfiletitle"
+      >
+         My Profile
+      </h1>
+      <div
+        className="profile-box"
+      >
+        <div
+          className="img-username"
+        >
+          <img
+            alt="user profile pic"
+            className="img-fluid"
+            src="http://www.macmillanenglish.com/img/author-image.png"
+          />
+          <div
+            className="username"
+          >
+            Username
+          </div>
+        </div>
+        <div
+          className="profile-details"
+        >
+          <div
+            className="bio"
+          >
+            This is my biography
+          </div>
+          <a
+            className="btn btn-outline-primary button"
+            href="/profiles/edit"
+          >
+            Edit Profile
+          </a>
+        </div>
+      </div>
+      <div
+        className="follow-box"
+      >
+        <div
+          className="followers-box"
+        >
+          <h6>
+            Followers
+          </h6>
+          <div
+            key=""
+          >
+            <div
+              className="follower-image"
+            >
+              <a
+                href="/profiles/"
+              >
+                <img
+                  alt="dp"
+                  src="https://iviidev.info/downloads/images/anon.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="followees-box"
+        >
+          <h6>
+            People you are following
+          </h6>
+          <div
+            key=""
+          >
+            <div
+              className="follower-image"
+            >
+              <a
+                href="/profiles/"
+              >
+                <img
+                  alt="dp"
+                  src="https://iviidev.info/downloads/images/anon.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ViewProfile>
+`;
+
 exports[`Profile component should render correctly 1`] = `
 <Connect(Profile)
+  followeesList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "",
+        "isFollowee": true,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
+  followersList={
+    Array [
+      Object {
+        "bio": "",
+        "created_at": "",
+        "first_name": "",
+        "image": "",
+        "isFollowee": true,
+        "last_name": "",
+        "updated_at": "",
+        "username": "",
+      },
+    ]
+  }
   getProfileAction={[MockFunction]}
   history={
     Object {

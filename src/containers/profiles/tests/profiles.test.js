@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import EditProfileConnected, { EditProfilePage } from '../editProfile';
 import EditProfile from '../../../components/Profile/editProfile';
 import ProfileConnected, { Profile } from '../profiles';
+import initialStateSample from '../../../commons/initialStates';
 
 Enzyme.configure({ adapter: new Adapter() });
 const storeFake = state => ({
@@ -61,7 +62,14 @@ describe('Test Profile container', () => {
 
   it('renders the container', () => {
     const { match } = props;
-    const wrappers = mount(<ProfileConnected store={mockStore(initialState)} match={match} />);
+    const wrappers = mount(
+      <ProfileConnected
+        store={mockStore(initialStateSample)}
+        match={match}
+        followersList={[]}
+        followeesList={[]}
+      />,
+    );
     expect(wrappers).toMatchSnapshot();
   });
   it('renders the container', () => {
@@ -88,6 +96,8 @@ describe('Profile component', () => {
       <Profile
         getProfileAction={getProfileAction}
         dispatch={dispatch}
+        followersList={[]}
+        followeesList={[]}
         {...props}
       />,
     );

@@ -8,6 +8,7 @@ import comments from './commentReducers';
 import ratingReducer from './ratingReducer/ratingReducer';
 import createArticleReducer from './createArticleReducer/createArticleReducer';
 import tagsReducer from './tagsReducer';
+import followUnfollowReducer from './followUnfollowReducer';
 
 const reducer = combineReducers({
   loginReducer,
@@ -19,6 +20,7 @@ const reducer = combineReducers({
   ratingReducer,
   createArticleReducer,
   tagsReducer,
+  followUnfollowReducer,
 });
 
 export default reducer;

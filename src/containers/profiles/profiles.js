@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getProfileAction } from '../../actions/profileActions';
 import ViewProfile from '../../components/Profile/viewProfile';
+import APP_URL from '../../utils/constants';
+import { getFollowProfilesThunk } from '../../actions/followActions';
 
 export class Profile extends Component {
   componentDidMount() {
@@ -10,6 +12,9 @@ export class Profile extends Component {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('username');
     dispatch(getProfileAction({ username, token }));
+    const url = `${APP_URL}/users/${username}`;
+    dispatch(getFollowProfilesThunk(`${url}/followers`, true));
+    dispatch(getFollowProfilesThunk(`${url}/following`, false));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,6 +29,7 @@ export class Profile extends Component {
       profile: {
         username, image, bio, firstname, lastname, isLoggedIn,
       },
+      followersList, followeesList,
     } = this.props;
     return (
       isLoggedIn && (
@@ -33,6 +39,8 @@ export class Profile extends Component {
         bio={bio}
         first_name={firstname}
         lastname={lastname}
+        followersList={followersList}
+        followeesList={followeesList}
       />)
     );
   }
@@ -43,6 +51,8 @@ Profile.propTypes = {
   dispatch: PropTypes.func.isRequired,
   profile: PropTypes.shape({}),
   history: PropTypes.shape({}),
+  followersList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  followeesList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 Profile.defaultProps = {
@@ -50,7 +60,9 @@ Profile.defaultProps = {
   isLoggedIn: true,
   history: {},
 };
-const mapStateToProps = ({ profileReducer }) => ({
+const mapStateToProps = ({ profileReducer, followUnfollowReducer }) => ({
   profile: profileReducer.profile,
+  followersList: followUnfollowReducer.followersList,
+  followeesList: followUnfollowReducer.followeesList,
 });
 export default connect(mapStateToProps)(Profile);

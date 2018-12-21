@@ -57,9 +57,26 @@ describe('Testing User Reducer', () => {
     };
     expect(userReducer(intialState, action)).toEqual(expectedData);
   });
+
   test('social media', () => {
     const initiaState = { isLoggedIn: false };
     const newState = socialLoginReducer(initiaState, LogIn());
     expect(newState).toEqual({ isLoggedIn: true });
+  });
+
+  test('Test Reducer User Register Fail with no username', () => {
+    const intialState = {};
+    const payload = {
+      email: ['user email already exists'],
+    };
+    const action = {
+      type: ACTION_TYPES.USER_REGISTER_FAIL,
+      payload,
+    };
+    const expectedData = {
+      ...intialState,
+      data: action.payload,
+    };
+    expect(userReducer(intialState, action)).toEqual(expectedData);
   });
 });

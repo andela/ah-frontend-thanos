@@ -48,7 +48,25 @@ const initialState = {
   },
   ratingReducer: {},
   tagsReducer: { tags: [] },
+  followUnfollowReducer: {
+    currentProfile: {
+      username: '',
+      bio: '',
+      first_name: '',
+      last_name: '',
+      image: '',
+      created_at: '',
+      updated_at: '',
+      isFollowee: false,
+    },
+    followersList: [],
+    followeesList: [],
+  },
 };
+
+export const sampleProfiles = [
+  { ...initialState.followUnfollowReducer.currentProfile, isFollowee: true },
+];
 
 export const sampleArticle = {
   id: 1,
@@ -92,5 +110,13 @@ export const sampleListOfArticles = [
   { ...sampleArticle, id: 4 }, { ...sampleArticle, id: 5 }, { ...sampleArticle, id: 6 },
   { ...sampleArticle, id: 7 }, { ...sampleArticle, id: 8 }, { ...sampleArticle, id: 9 },
 ];
+
+export const tempProfile = {
+  username: localStorage.getItem('username'),
+  first_name: 'You!',
+  last_name: '',
+  image: 'https://iviidev.info/downloads/images/you.jpg',
+  isFollowee: false,
+};
 
 export default initialState;

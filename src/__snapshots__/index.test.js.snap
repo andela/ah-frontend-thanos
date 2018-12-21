@@ -52,6 +52,11 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
       component={[Function]}
       path="/tags"
     />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/profiles/:username"
+    />
   </Switch>
   <_class
     options={Object {}}
