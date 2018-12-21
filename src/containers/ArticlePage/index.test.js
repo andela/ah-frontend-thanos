@@ -46,10 +46,10 @@ describe('<ArticlePage />', () => {
       <Provider store={mockStore(initialState)}>
         <ArticlePage
           match={match}
+          article={article}
           likeDislikeArticleDispatch={likeDislikeArticleDispatch}
           getArticleDispatch={getArticleDispatch}
           getLikeDislikeStatusDispatch={getLikeDislikeStatusDispatch}
-          article={article}
         />
       </Provider>,
     );
@@ -59,7 +59,12 @@ describe('<ArticlePage />', () => {
     const { match } = props;
     wrapper = mount(
       <Provider store={mockStore(initialState)}>
-        <ArticlePageConnected store={mockStore(initialState)} match={match} />
+        <ArticlePageConnected
+          store={mockStore(
+            { articleReducer: { article: {} } },
+          )}
+          match={match}
+        />
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();

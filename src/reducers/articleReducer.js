@@ -3,7 +3,7 @@ import ACTION_TYPE from '../actions/actionTypes';
 import initialState from '../commons/initialStates';
 
 const initialStateReducer = {
-  articles: [],
+  articles: {},
   errorMessage: '',
   article: initialState.articleReducer.article,
 };

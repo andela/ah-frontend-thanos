@@ -20,7 +20,7 @@ export const likeDislikeArticleThunk = likeObj => (dispatch) => {
       .then((response) => {
         dispatch(likeDislikeArticleAction(payload(response)));
       })
-      .catch(() => {});
+      .catch(() => { });
   }
   return axios.post(url, likeObj, headerValue)
     .then((response) => {

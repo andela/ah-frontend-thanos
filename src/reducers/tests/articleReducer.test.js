@@ -22,16 +22,16 @@ describe('Article Reducer', () => {
 
     initialStateWithLike = {
       article: {
-        likes: 0,
-        dislikes: 0,
+        likes: 4,
+        dislikes: 4,
         likeDislikeStatus: 'like',
       },
     };
 
     initialStateWithDislike = {
       article: {
-        likes: 0,
-        dislikes: 0,
+        likes: 4,
+        dislikes: 4,
         likeDislikeStatus: 'dislike',
       },
     };
@@ -63,7 +63,7 @@ describe('Article Reducer', () => {
     ).toEqual({
       article: initialState.articleReducer.article,
       errorMessage,
-      articles: [],
+      articles: {},
     });
   });
 
@@ -92,8 +92,8 @@ describe('Article Reducer', () => {
     };
     const expectedStateAfterAction = {
       article: {
-        likes: 0,
-        dislikes: 0,
+        likes: 4,
+        dislikes: 4,
         likeDislikeStatus: 'like',
       },
     };
@@ -125,8 +125,8 @@ describe('Article Reducer', () => {
     };
     const expectedStateAfterAction = {
       article: {
-        likes: 0,
-        dislikes: 0,
+        likes: 4,
+        dislikes: 4,
         likeDislikeStatus: 'dislike',
       },
     };

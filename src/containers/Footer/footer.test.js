@@ -6,15 +6,17 @@ import { sampleListOfArticles } from '../../commons/initialStates';
 describe('Footer tests', () => {
   let wrapper;
   let toTop;
+  let articles;
 
   beforeEach(() => {
     toTop = jest.fn();
-    wrapper = mount(<Footer articles={sampleListOfArticles} toTop={toTop} />);
+    articles = { results: sampleListOfArticles };
+    wrapper = mount(<Footer articles={articles} toTop={toTop} />);
   });
 
   test('testing footer', () => {
     const footer = shallow(
-      <Footer articles={sampleListOfArticles} />,
+      <Footer articles={articles} />,
     );
     expect(footer).toMatchSnapshot();
   });

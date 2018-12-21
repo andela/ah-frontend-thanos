@@ -23,15 +23,23 @@ export const CarouselBanner = ({ articles }) => (
       <li data-target="#carouselExampleIndicators" data-slide-to="2" />
     </ol>
     <div className="carousel-inner">
-      {articles && articles.length > 2 && articles.slice(0, 3).map(article => (
-        <div className={`carousel-item carousel-image-item ${getCssClasses(articles[0], article)}`} key={article.id}>
-          <img className="d-block w-100" src={article.image_url} alt="slide" />
-          <div className="carousel-caption d-none d-md-block carousel-article-desc">
-            <h5><a href={`article/${article.id}`}>{article.title}</a></h5>
-            <p>{article.description}</p>
+      {articles.results && articles.results.length > 2
+        ? (
+          <div>
+            {articles.results.slice(0, 3).map(article => (
+              <div className={`carousel-item carousel-image-item ${getCssClasses(articles.results[0], article)}`} key={article.id}>
+                <img className="d-block w-100" src={article.image_url} alt="slide" />
+                <div className="carousel-caption d-none d-md-block carousel-article-desc">
+                  <h5><a href={`article/${article.id}`}>{article.title}</a></h5>
+                  <p>{article.description}</p>
+                </div>
+              </div>
+            ))
+            }
           </div>
-        </div>
-      ))}
+        )
+        : <span />
+      }
     </div>
     {renderNextPreviousIcons('prev', 'Previous')}
     {renderNextPreviousIcons('next', 'Next')}
@@ -39,7 +47,7 @@ export const CarouselBanner = ({ articles }) => (
 );
 
 CarouselBanner.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  articles: PropTypes.shape({}).isRequired,
 };
 
 const mapStateToProps = ({ articleReducer }) => ({

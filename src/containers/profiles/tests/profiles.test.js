@@ -25,11 +25,19 @@ describe('profile container', () => {
 
   beforeEach(() => {
     jest.resetAllMocks();
-    const store = storeFake({ profile: { username: 'test' } });
+    const profile = {
+      username: 'Bruce',
+      image: 'htpp://127.0.0.1/test/.png',
+      bio: 'This is my bio',
+      firstname: 'Bruce',
+      lastname: 'Allan',
+      isLoggedIn: true,
+    };
+    const store = storeFake({ profile });
 
     wrapper = mount(
       <Provider store={store}>
-        <EditProfilePage />
+        <EditProfilePage profile={profile} />
       </Provider>,
     );
 

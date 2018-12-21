@@ -306,6 +306,16 @@ exports[`profile container should render correctly 1`] = `
   <EditProfilePage
     editProfileDispatch={[Function]}
     getUserInputs={[Function]}
+    profile={
+      Object {
+        "bio": "This is my bio",
+        "firstname": "Bruce",
+        "image": "htpp://127.0.0.1/test/.png",
+        "isLoggedIn": true,
+        "lastname": "Allan",
+        "username": "Bruce",
+      }
+    }
     userProfile={Object {}}
   >
     <EditProfile

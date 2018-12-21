@@ -63,7 +63,7 @@ exports[`Provider and App renders <Provider/> correctly 2`] = `
     />
     <Route
       component={[Function]}
-      path="/articles"
+      path="/articles/page/:pageNumber"
     />
     <Route
       component={[Function]}

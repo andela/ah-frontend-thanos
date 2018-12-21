@@ -31,7 +31,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignUpPageConnected} />
-        <Route path="/articles" component={Articles} />
+        <Route path="/articles/page/:pageNumber" component={Articles} />
         <Route path="/article/:articleId" component={ArticlePageConnected} />
         <Route path="/profile" component={ProfileConnected} />
         <Route path="/profiles/edit" component={EditProfilePageConnected} />

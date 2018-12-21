@@ -87,6 +87,7 @@ exports[`<Article /> should render correctly 1`] = `
                 2018-12-10T05:23:51.342553Z
               </small>
             </h6>
+            <hr />
           </div>
           <p
             className="card-text"

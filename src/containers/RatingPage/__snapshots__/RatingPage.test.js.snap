@@ -4,6 +4,11 @@ exports[`<RatingPage /> should render the component 1`] = `
 <Connect(RatingPage)
   article={[MockFunction]}
   articleId={1}
+  ratingReducer={
+    Object {
+      "rating": 1,
+    }
+  }
   store={
     Object {
       "clearActions": [Function],

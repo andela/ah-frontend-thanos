@@ -146,21 +146,21 @@ exports[`<Header /> component should render correctly 1`] = `
                     activeClassName="active"
                     aria-current="page"
                     className="dropdown-item dropdown-single"
-                    to="/articles"
+                    to="/articles/page/1"
                   >
                     <Route
-                      path="\\\\/articles"
+                      path="\\\\/articles\\\\/page\\\\/1"
                     >
                       <Link
                         aria-current={null}
                         className="dropdown-item dropdown-single"
                         replace={false}
-                        to="/articles"
+                        to="/articles/page/1"
                       >
                         <a
                           aria-current={null}
                           className="dropdown-item dropdown-single"
-                          href="/articles"
+                          href="/articles/page/1"
                           onClick={[Function]}
                         >
                           All articles

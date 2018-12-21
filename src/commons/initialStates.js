@@ -23,7 +23,7 @@ const initialState = {
         email: '',
       },
     },
-    articles: [],
+    articles: {},
     errorMessage: '',
   },
   deleteArticleReducer: {},
