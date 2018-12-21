@@ -5,6 +5,11 @@ import { loginSuccess, loginThunk, loginFailure } from './loginAction';
 import ACTION_TYPE from '../actionTypes';
 import APP_URL from '../../utils/constants';
 
+const expectedtActionsLogin = [{
+  payload: { response: undefined },
+  type: ACTION_TYPE.USER_LOGIN_SUCCESS,
+}];
+
 describe('Login Actions tests', () => {
   const mockStore = configureMockStore([thunk]);
   const loginSuccessData = {
@@ -40,9 +45,8 @@ describe('Login Actions tests', () => {
   );
   test('Login successfull', () => {
     moxios.stubRequest(`${APP_URL}/users/login`, loginSuccessData);
-    const expectedtActions = { type: ACTION_TYPE.USER_LOGIN_SUCCESS };
     const store = mockStore({});
-    returnExpect(store, expectedtActions);
+    returnExpect(store, expectedtActionsLogin);
   });
   test('Login failed', () => {
     moxios.stubRequest(`${APP_URL}/users/login`, {

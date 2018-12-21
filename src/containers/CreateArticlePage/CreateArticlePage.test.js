@@ -7,11 +7,15 @@ import CreateArticlePage, { mapDispatchToProps } from './index';
 describe('<CreateArticlePage />', () => {
   let CreateArticlePageComponent;
   let wrapper;
+  const cloudinaryData = {
+    event: 'success',
+    info: { secure_url: 'http://cloud/img/123.png' },
+  };
   beforeEach(() => {
     jest.resetModules();
     const middlewares = [thunk];
     const mockStore = configureStore(middlewares);
-    const initialState = { createArticleReducer: { articlePostData: { tag_list: 'one,two', title: 1 } } };
+    const initialState = { createArticleReducer: { articlePostData: { tag_list: 'one,two', title: 1 } }, articleReducer: { article: 'good work' } };
     const store = mockStore(initialState);
     CreateArticlePageComponent = mount(
       <CreateArticlePage store={store} />,
@@ -24,10 +28,7 @@ describe('<CreateArticlePage />', () => {
   test('test function ', async () => {
     global.cloudinary = {
       openUploadWidget: (params, cb) => {
-        cb(null, {
-          event: 'success',
-          info: { secure_url: 'http://cloudinary/img/123.png' },
-        });
+        cb(null, cloudinaryData);
       },
     };
     const widgetFn = wrapper.dive().instance().handleOnClick();

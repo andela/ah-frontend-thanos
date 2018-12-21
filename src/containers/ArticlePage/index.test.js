@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -75,5 +75,24 @@ describe('<ArticlePage />', () => {
   it('should check for the presence of like/dislike dispatch', () => {
     mapDispatchToProps(dispatch).likeDislikeArticleDispatch({});
     expect(dispatch.mock.calls[0][0]).toBeDefined();
+  });
+  test('Test function', () => {
+    const {
+      match, getArticleDispatch, getLikeDislikeStatusDispatch, article,
+    } = props;
+    const historyMock = { push: jest.fn() };
+    const wrapper2 = shallow(
+      <Provider store={mockStore(initialState)}>
+        <ArticlePage
+          match={match}
+          history={historyMock}
+          likeDislikeArticleDispatch={likeDislikeArticleDispatch}
+          getArticleDispatch={getArticleDispatch}
+          getLikeDislikeStatusDispatch={getLikeDislikeStatusDispatch}
+          article={article}
+        />
+      </Provider>,
+    );
+    expect(wrapper2.dive().instance().handleOnClick());
   });
 });

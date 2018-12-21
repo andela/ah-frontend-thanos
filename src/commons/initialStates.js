@@ -29,6 +29,7 @@ const initialState = {
   socialLoginReducer: { isLoggedIn: false },
   loginReducer: { errorMessage: '', successMessage: '', user_details: '' },
   createArticleReducer: {},
+  editArticleReducer: {},
   userReducer: {
     freshUser: { email: '', password: '', username: '' },
   },

@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import './CreateArticle.scss';
+// import './CreateArticle.scss';
 import * as PropTypes from 'prop-types';
 
 const formInputs = (
   inputName,
   onChange,
   inputId,
+  defaultValue,
   minLength,
   maxLength,
 ) => (
@@ -18,6 +19,7 @@ const formInputs = (
       name={inputName}
       onChange={onChange}
       id={inputId}
+      defaultValue={defaultValue}
       rows="3"
       required
     />
@@ -30,14 +32,15 @@ const Image = onClick => (
   </div>
 );
 
-const CreateArticle = ({
+const EditArticle = ({
   onChange,
   onSubmit,
   onClick,
+  article,
 }) => (
   <div>
     <br />
-    <h3 className="text-center createArticleTitle">Create Your Article</h3>
+    <h3 className="text-center createArticleTitle">Edit Your Article</h3>
     <hr className="col-sm-8 " />
     <br />
     <div className="col-sm-10 offset-2 artcileCreate">
@@ -46,7 +49,7 @@ const CreateArticle = ({
         <small>
           Title must be 130 characters maximum and 5 characters minimum
         </small>
-        {formInputs('title', onChange, 'titleInput', '5', '130')}
+        {formInputs('title', onChange, 'titleInput', article.title, '5', '130')}
         <h5>Description</h5>
         <small>
           Title must be 150 characters maximum and 100 characters minimum
@@ -55,18 +58,19 @@ const CreateArticle = ({
           'description',
           onChange,
           'descriptionInput',
+          article.description,
           '100',
           '120',
         )}
 
         <h5>Tag list</h5>
-        {formInputs('tag_list', onChange, 'tag_listInput')}
+        {formInputs('tag_list', onChange, 'tag_listInput', article.tag_list)}
         <br />
         <h5>Upload Image</h5>
         {Image(onClick)}
         <br />
         <h5>Body</h5>
-        {formInputs('body', onChange, 'bodyInput')}
+        {formInputs('body', onChange, 'bodyInput', article.body)}
         <div className="signin-createArticleBt">
           <button
             type="submit"
@@ -82,15 +86,15 @@ const CreateArticle = ({
   </div>
 );
 
-CreateArticle.propTypes = {
+EditArticle.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
   article: PropTypes.shape({}),
 };
 
-CreateArticle.defaultProps = {
+EditArticle.defaultProps = {
   article: {},
 };
 
-export default CreateArticle;
+export default EditArticle;

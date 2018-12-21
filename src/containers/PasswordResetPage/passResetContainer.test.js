@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -20,6 +20,11 @@ describe('handle Invoke email for password reset', () => {
     );
   });
 
+  test('', () => {
+    const wrapper = shallow(<PasswordResetPage store={store} />);
+    const evt = { target: { id: 12, value: 'Likes' } };
+    expect(wrapper.instance().handleChange(evt));
+  });
   it('should submit user email for passwordreset', () => {
     component
       .find('input#email')
